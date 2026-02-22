@@ -6,7 +6,7 @@ interface SectionWrapperProps {
   id?: string
   children: ReactNode
   className?: string
-  background?: 'cream' | 'white' | 'navy' | 'gradient' | 'cta'
+  background?: 'cream' | 'white' | 'navy' | 'gradient' | 'cta' | 'ctaTeal'
   ariaLabel?: string
   /** When true, section sits under header with no gap; uses top padding to clear fixed nav */
   attachHeader?: boolean
@@ -17,8 +17,10 @@ const bgMap = {
   white: 'bg-white text-navy-800',
   navy: 'bg-navy-900 text-cream',
   gradient: 'bg-section-gradient text-navy-800',
-  /** Distinct from footer: gradient so Partnerships & Booking section doesn't blend with footer */
+  /** Dark navy gradient — distinct from solid footer */
   cta: 'bg-gradient-to-b from-navy-800 to-navy-950 text-cream',
+  /** Dark teal (gold-800/900) — clearly different from navy footer */
+  ctaTeal: 'bg-gradient-to-b from-gold-800 to-gold-900 text-cream',
 }
 
 export function SectionWrapper({

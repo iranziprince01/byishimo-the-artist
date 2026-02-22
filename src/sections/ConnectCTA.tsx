@@ -6,26 +6,26 @@ import { HiEnvelope, HiPhone, HiCalendar } from 'react-icons/hi2'
 
 export function ConnectCTA() {
   return (
-    <SectionWrapper background="navy" ariaLabel="Connect and contact">
+    <SectionWrapper background="gradient" ariaLabel="Connect and contact">
       <div className="max-w-2xl mx-auto text-center">
         <AnimatedReveal>
-          <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-3">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900 mb-3">
             Connect with us
           </h2>
-          <p className="text-cream/80 font-body text-lg mb-8">
+          <p className="text-navy-600 font-body text-lg mb-8">
             For booking, partnerships, media, or general inquiries — we would like to hear from you.
           </p>
-          <div className="flex flex-wrap justify-center gap-6 text-cream/90 font-body text-sm">
+          <div className="flex flex-wrap justify-center gap-6 text-navy-700 font-body text-sm">
             <a
               href={`mailto:${siteMeta.email}`}
-              className="inline-flex items-center gap-2 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 hover:text-navy-900 transition-colors"
             >
               <HiEnvelope className="w-5 h-5" />
               {siteMeta.email}
             </a>
             <a
               href={`tel:${siteMeta.phone.replace(/\s|\(|\)|-/g, '')}`}
-              className="inline-flex items-center gap-2 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 hover:text-navy-900 transition-colors"
             >
               <HiPhone className="w-5 h-5" />
               {siteMeta.phone}
