@@ -45,7 +45,8 @@ export function Hero() {
           transition={stagger(2)}
           className="font-display text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.08] mb-8"
         >
-          {siteMeta.artistName}
+          <span className="block">{siteMeta.artistName.split(' ')[0]}</span>
+          <span className="block">{siteMeta.artistName.split(' ').slice(1).join(' ')}</span>
         </motion.h1>
 
         <motion.p
