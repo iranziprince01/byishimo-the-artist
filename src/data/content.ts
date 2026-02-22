@@ -1,4 +1,4 @@
-import type { Track, Highlight, Testimonial, SocialLink, NavLink } from '../types'
+import type { Track, Highlight, Testimonial, SocialLink, NavLink, Partnership } from '../types'
 
 /** Image paths use filenames as in public/images/ */
 export const images = {
@@ -13,29 +13,38 @@ export const images = {
 
 export const siteMeta = {
   artistName: 'Patrick Byishimo',
-  tagline: 'Multilingual Worship Artist Bridging Cultures Through Music',
-  mission: 'Leading worship across languages and cultures—from Rwanda to Canada—with excellence, authenticity, and a heart for the global Church.',
-  /** Single hero summary (tagline + mission combined for a cleaner hero) */
-  heroSummary: 'Multilingual worship artist bridging cultures through music—from Rwanda to Canada—with excellence, authenticity, and a heart for the global Church.',
+  tagline: 'International Gospel Artist · Worship Leader · Songwriter',
+  mission: 'Leading worship and Gospel music globally with excellence, authenticity, and a heart for the Church worldwide.',
+  heroSummary: 'International Gospel artist bridging cultures through music—with excellence, authenticity, and a heart for the global Church. Available for concerts, conferences, and partnerships.',
   location: '7412 174 Avenue NW, Edmonton, Alberta, Canada',
-  origin: 'Rwanda',
-  languages: ['Kinyarwanda', 'English', 'French'],
   email: 'contact@byishimomusic.com',
   phone: '+1 (780) 200-9912',
-  /** Registered business */
   businessName: 'Patrick Byishimo Music',
   businessType: 'Gospel Music production, publishing & entertainment services',
 }
 
+/** Main header nav: 5 items. Other pages linked from Home and footer. */
 export const navLinks: NavLink[] = [
-  { label: 'About', href: '#about' },
-  { label: 'Music', href: '#music' },
-  { label: 'Highlights', href: '#highlights' },
-  { label: 'Vision', href: '#vision' },
-  { label: 'Press', href: '#press' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'Booking', href: '#booking' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Music', href: '/music' },
+  { label: 'Experience', href: '/experience' },
+  { label: 'Booking', href: '/booking' },
+]
+
+/** Footer: main nav + Concerts, Partnerships (no longer in header) */
+export const footerNavLinks: NavLink[] = [
+  ...navLinks,
+  { label: 'Concerts', href: '/concerts' },
+  { label: 'Partnerships', href: '/partnerships' },
+]
+
+/** Replace with actual artist/song URLs when available. Only major platforms: YouTube, Spotify, Apple Music, Audiomack. */
+const defaultStreamingLinks = [
+  { platform: 'Spotify', url: '#' },
+  { platform: 'Apple Music', url: '#' },
+  { platform: 'YouTube Music', url: '#' },
+  { platform: 'Audiomack', url: '#' },
 ]
 
 export const tracks: Track[] = [
@@ -45,22 +54,15 @@ export const tracks: Track[] = [
     description: 'A declaration of God’s faithfulness in worship, inviting hearts to trust and praise.',
     releaseDate: '2024',
     youtubeId: '27RYulXhJcY',
-    streamingLinks: [
-      { platform: 'Spotify', url: '#' },
-      { platform: 'Apple Music', url: '#' },
-      { platform: 'YouTube Music', url: '#' },
-    ],
+    streamingLinks: defaultStreamingLinks,
   },
   {
     id: '2',
     title: 'Umurunga',
-    description: 'Worship in Kinyarwanda, honoring heritage and the heart of East African praise.',
+    description: 'Multilingual worship honoring heritage and the heart of global praise.',
     releaseDate: '2024',
     youtubeId: 'z3a3DZHming',
-    streamingLinks: [
-      { platform: 'Spotify', url: '#' },
-      { platform: 'Apple Music', url: '#' },
-    ],
+    streamingLinks: defaultStreamingLinks,
   },
   {
     id: '3',
@@ -68,10 +70,7 @@ export const tracks: Track[] = [
     description: 'A song of faith and confidence in God, connecting language and culture through worship.',
     releaseDate: '2024',
     youtubeId: 'Gv9vo44oxPg',
-    streamingLinks: [
-      { platform: 'Spotify', url: '#' },
-      { platform: 'YouTube Music', url: '#' },
-    ],
+    streamingLinks: defaultStreamingLinks,
   },
 ]
 
@@ -86,7 +85,7 @@ export const highlights: Highlight[] = [
   },
   {
     id: '2',
-    title: 'Rwanda-Canada Worship Conference',
+    title: 'International Worship Conference',
     type: 'conference',
     date: '2024',
     location: 'Edmonton',
@@ -98,7 +97,7 @@ export const highlights: Highlight[] = [
     type: 'church',
     date: 'Ongoing',
     location: 'Local churches',
-    description: 'Regular worship leading across Edmonton-area congregations.',
+    description: 'Regular worship leading across congregations.',
   },
   {
     id: '4',
@@ -127,7 +126,7 @@ export const highlights: Highlight[] = [
 export const testimonials: Testimonial[] = [
   {
     id: '1',
-    quote: 'Patrick brings a rare combination of authenticity and excellence. His multilingual worship creates a bridge that unites our congregation in a powerful way.',
+    quote: 'Patrick brings a rare combination of authenticity and excellence. His worship creates a bridge that unites our congregation in a powerful way.',
     author: 'Pastor James M.',
     role: 'Senior Pastor',
     organization: 'Edmonton Community Church',
@@ -141,7 +140,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: '3',
-    quote: 'His ability to lead in Kinyarwanda, English, and French in one service was transformative for our diverse community. Highly recommend.',
+    quote: 'His ability to lead across languages in one service was transformative for our diverse community. Highly recommend for international events.',
     author: 'Rev. David L.',
     role: 'Event Organizer',
     organization: 'Multicultural Ministry Network',
@@ -156,42 +155,42 @@ export const socialLinks: SocialLink[] = [
 ]
 
 export const bioParagraphs = [
-  'Patrick Byishimo is a Gospel artist, worship leader, and songwriter based in Edmonton, Canada. Born in Rwanda, his artistic roots are deeply connected to East African worship traditions while his ministry has expanded across North America.',
-  'After settling in Canada, Patrick has dedicated his craft to multilingual worship—leading and writing in Kinyarwanda, English, and French. His music blends contemporary Gospel and worship with Afro-influenced sounds, creating a distinct voice that resonates across cultures.',
-  'His artistic evolution reflects a commitment to professional standards: from local church ministry to conference stages, live streams, and recorded releases. Patrick is actively building a body of work that serves the global Church and positions him for international visibility.',
-  'His vision centers on cultural bridge-building: uniting Rwandan and Canadian communities through worship, and scaling his music to reach Francophone and Anglophone audiences worldwide with excellence and integrity.',
+  'Patrick Byishimo is an international Gospel artist, worship leader, and songwriter. His ministry spans continents—serving the Church through concerts, conferences, and recorded music with a focus on excellence and global reach.',
+  'Patrick has dedicated his craft to multilingual worship and Gospel music that resonates across cultures. His music blends contemporary Gospel and worship with diverse influences, creating a distinct voice for audiences worldwide.',
+  'His work reflects a commitment to professional standards: from church ministry to conference stages, live streams, and streaming releases. Patrick Byishimo Music operates as a registered business focused on production, publishing, and entertainment services.',
+  'The vision is clear: scale music and ministry internationally—through releases, partnerships, and platforms that extend reach while maintaining artistic and spiritual integrity. Ideal for grant providers, concert promoters, and ministry partners seeking a professional Gospel artist.',
 ]
 
 export const visionPoints = [
   {
+    title: 'Global Gospel Reach',
+    description: 'A steadfast commitment to taking Gospel music and worship to international audiences—concerts, festivals, conferences, and digital platforms.',
+  },
+  {
     title: 'Multilingual Worship',
-    description: 'A steadfast commitment to leading and creating worship in Kinyarwanda, English, and French, so that diverse congregations can encounter God in their heart language.',
+    description: 'Leading and creating worship in multiple languages so that diverse congregations worldwide can encounter God in their heart language.',
   },
   {
-    title: 'Cultural Bridge',
-    description: 'Intentional ministry that connects Rwanda and Canada—honoring heritage while serving the Church in both nations and the diaspora.',
+    title: 'Professional Standards',
+    description: 'Excellence in songwriting, production, and live delivery—Gospel music presented at a level that honors the message, the audience, and partners.',
   },
   {
-    title: 'Community-Centered Ministry',
-    description: 'Local church engagement, youth ministry, and community events remain at the core of his calling, with growth that stays rooted in relationship.',
+    title: 'International Partnerships',
+    description: 'Building with churches, labels, promoters, and ministries—collaboration that extends reach and amplifies Gospel witness across borders.',
   },
   {
-    title: 'International Scale',
-    description: 'A clear direction toward scaling music and ministry internationally—through releases, collaborations, and platforms that extend reach while maintaining artistic and spiritual integrity.',
+    title: 'Business-Ready Ministry',
+    description: 'Patrick Byishimo Music operates as a registered business—positioned for grants, ticketing, licensing, and sustainable international ministry.',
   },
   {
-    title: 'Excellence & Professional Standards',
-    description: 'A passion for excellence in songwriting, production, and live delivery—so that Gospel music is presented at a level that honors the message and the audience.',
-  },
-  {
-    title: 'Partnership & Collaboration',
-    description: 'Building with churches, fellow artists, and ministries—collaboration that strengthens the body of Christ and amplifies Gospel witness across cultures and borders.',
+    title: 'Community & Church Engagement',
+    description: 'Local and global church engagement, youth ministry, and events remain at the core, with growth that stays rooted in relationship and impact.',
   },
 ]
 
 export const pressKit = {
-  shortBio: 'Patrick Byishimo is a Rwanda-born, Edmonton-based Gospel artist, worship leader, and songwriter. He leads and creates worship in Kinyarwanda, English, and French, blending contemporary Gospel with Afro-influenced sounds.',
-  genre: 'Gospel / Worship / Afro-influenced',
+  shortBio: 'Patrick Byishimo is an international Gospel artist, worship leader, and songwriter. He leads and creates worship and Gospel music for global audiences, blending contemporary Gospel with diverse cultural influences. Patrick Byishimo Music is a registered business offering production, publishing, and entertainment services.',
+  genre: 'Gospel / Worship / International',
   businessName: 'Patrick Byishimo Music',
   businessType: 'Gospel Music production, publishing & entertainment services',
   location: '7412 174 Avenue NW, Edmonton, Alberta, Canada',
@@ -200,3 +199,34 @@ export const pressKit = {
   techRiderNote: 'Technical rider available upon request.',
   stageRequirementsNote: 'Stage and production requirements provided with booking confirmation.',
 }
+
+export const partnerships: Partnership[] = [
+  {
+    id: '1',
+    name: 'Church & Ministry Touring',
+    type: 'Touring & Events',
+    description: 'Structured partnerships with churches and ministries for worship nights, conferences, and multi-date runs. Inquiries welcome.',
+    status: 'incoming',
+  },
+  {
+    id: '2',
+    name: 'Festival & Concert Booking',
+    type: 'Live Events',
+    description: 'Partnerships with Gospel festivals and concert promoters for main-stage and featured artist slots.',
+    status: 'incoming',
+  },
+  {
+    id: '3',
+    name: 'Label & Distribution',
+    type: 'Music',
+    description: 'Exploring label and distribution partnerships for future releases and catalog expansion.',
+    status: 'incoming',
+  },
+  {
+    id: '4',
+    name: 'Grant & Funding Programs',
+    type: 'Funding',
+    description: 'Open to grant programs and funding partners supporting Gospel music and international ministry.',
+    status: 'incoming',
+  },
+]

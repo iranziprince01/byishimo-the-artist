@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { siteMeta, images } from '../data/content'
 import { HiPlay, HiCalendar, HiMusicalNote } from 'react-icons/hi2'
@@ -65,27 +66,27 @@ export function Hero() {
           transition={stagger(4)}
           className="flex flex-wrap gap-3 sm:gap-4"
         >
-          <a
-            href="#music"
+          <Link
+            to="/music"
             className="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 py-3 rounded-xl font-semibold text-navy-900 bg-white hover:bg-white/95 shadow-lg border border-white/40 transition-all hover:scale-[1.02] active:scale-[0.98]"
           >
             <HiPlay className="w-5 h-5" aria-hidden />
             Listen Now
-          </a>
-          <a
-            href="#booking"
+          </Link>
+          <Link
+            to="/booking"
             className="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 py-3 rounded-xl font-semibold text-navy-900 bg-[#ffe600] hover:bg-[#ffec33] shadow-lg border border-navy-900/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
           >
             <HiCalendar className="w-5 h-5" aria-hidden />
             Book Patrick
-          </a>
-          <a
-            href="#press"
+          </Link>
+          <Link
+            to="/press"
             className="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 py-3 rounded-xl font-semibold text-white bg-transparent border-2 border-white hover:bg-white hover:text-navy-900 transition-all hover:scale-[1.02] active:scale-[0.98]"
           >
             <HiMusicalNote className="w-5 h-5" aria-hidden />
             View Media
-          </a>
+          </Link>
         </motion.div>
       </div>
 

@@ -1,4 +1,5 @@
-import { navLinks, socialLinks, siteMeta, images } from '../data/content'
+import { Link } from 'react-router-dom'
+import { footerNavLinks, socialLinks, siteMeta, images } from '../data/content'
 import { Container } from '../ui/Container'
 import { FaYoutube, FaSpotify, FaInstagram, FaFacebook } from 'react-icons/fa'
 
@@ -52,25 +53,30 @@ export function Footer() {
           <nav aria-label="Footer navigation" className="md:pt-0 flex-1 min-w-0 w-full">
             <div className="grid grid-cols-3 w-full gap-x-6 sm:gap-x-10 lg:gap-x-12 gap-y-1">
               {[
-                [navLinks[0], navLinks[1], navLinks[6]],       // About, Music, Testimonials
-                [navLinks[2], navLinks[3], navLinks[7]],       // Highlights, Vision, Booking
-                [navLinks[4], navLinks[5], { label: 'Press Kit', href: '#press' }], // Press, Gallery, Press Kit
+                [footerNavLinks[0], footerNavLinks[1], footerNavLinks[2]], // Home, About, Music
+                [footerNavLinks[3], footerNavLinks[4]],                     // Experience, Booking
+                [footerNavLinks[5], footerNavLinks[6]],                    // Concerts, Partnerships
               ].map((column, colIndex) => (
                 <div key={colIndex} className="flex flex-col gap-1">
                   {column.map((link) => (
-                    <a
+                    <Link
                       key={link.href}
-                      href={link.href}
+                      to={link.href}
                       className="text-cream/80 hover:text-white font-body text-sm transition-colors w-fit"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               ))}
             </div>
             <p className="text-cream/50 font-body text-xs mt-2">
               {siteMeta.businessType}
+            </p>
+            <p className="text-cream/45 font-body text-xs mt-2">
+              Coming soon: <Link to="/branding" className="text-cream/60 hover:text-cream transition-colors">Branding</Link>
+              {' · '}
+              <Link to="/merch" className="text-cream/60 hover:text-cream transition-colors">Merch</Link>
             </p>
           </nav>
         </div>
@@ -87,13 +93,13 @@ export function Footer() {
                   {iconMap[link.icon as keyof typeof iconMap]}
                 </span>
               ) : (
-<a
-                    key={link.platform}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-cream/80 hover:text-white transition-colors"
-                    aria-label={link.platform}
+                <a
+                  key={link.platform}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cream/80 hover:text-white transition-colors"
+                  aria-label={link.platform}
                 >
                   {iconMap[link.icon as keyof typeof iconMap]}
                 </a>

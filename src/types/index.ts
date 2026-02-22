@@ -35,3 +35,11 @@ export interface NavLink {
   label: string
   href: string
 }
+
+export interface Partnership {
+  id: string
+  name: string
+  type: string
+  description: string
+  status: 'incoming' | 'active' | 'announced'
+}

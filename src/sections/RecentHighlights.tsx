@@ -15,9 +15,9 @@ const typeConfig: Record<string, { icon: React.ReactNode; label: string }> = {
 
 export function RecentHighlights() {
   return (
-    <SectionWrapper id="highlights" background="gradient" ariaLabel="Recent highlights">
-      <AnimatedReveal>
-        <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
+    <SectionWrapper id="highlights" background="gradient" ariaLabel="Recent highlights" attachHeader>
+      <AnimatedReveal className="flex flex-col gap-1">
+        <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 pb-4">
           Recent Highlights
         </h2>
         <p className="text-navy-600 font-body text-lg max-w-2xl">
@@ -25,9 +25,9 @@ export function RecentHighlights() {
         </p>
       </AnimatedReveal>
 
-      <div className="mt-12 relative">
+      <div className="pt-14 sm:pt-16 relative">
         <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-navy-200 -translate-x-px hidden sm:block" aria-hidden />
-        <ul className="space-y-8 sm:space-y-12">
+        <ul className="flex flex-col gap-10 sm:gap-14">
           {highlights.map((item, i) => {
             const config = typeConfig[item.type] ?? typeConfig.community
             return (
@@ -37,7 +37,7 @@ export function RecentHighlights() {
                     <div className="text-right">
                       <p className="text-navy-600 font-body font-medium">{item.date}</p>
                       {item.location && (
-                        <p className="text-navy-600 text-sm mt-0.5">{item.location}</p>
+                        <p className="text-navy-600 text-sm pt-0.5">{item.location}</p>
                       )}
                     </div>
                   </div>
@@ -49,17 +49,17 @@ export function RecentHighlights() {
                       {config.icon}
                     </div>
                     <Card hover className="p-6">
-                      <p className="sm:hidden text-navy-600 font-body text-sm mb-1">{item.date}</p>
-                      {item.location && <p className="sm:hidden text-navy-500 text-sm mb-2">{item.location}</p>}
+                      <p className="sm:hidden text-navy-600 font-body text-sm pb-1">{item.date}</p>
+                      {item.location && <p className="sm:hidden text-navy-500 text-sm pb-2">{item.location}</p>}
                       <h3 className="font-display text-xl font-semibold text-navy-900">
                         {item.title}
                       </h3>
                       {item.description && (
-                        <p className="font-body text-navy-600 mt-2 text-sm">
+                        <p className="font-body text-navy-600 pt-2 text-sm">
                           {item.description}
                         </p>
                       )}
-                      <span className="inline-block mt-2 text-xs font-medium text-navy-500 uppercase tracking-wider">
+                      <span className="inline-block pt-2 text-xs font-medium text-navy-500 uppercase tracking-wider">
                         {config.label}
                       </span>
                     </Card>

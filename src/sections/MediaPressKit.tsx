@@ -8,12 +8,12 @@ import { downloadPressKitPdf } from '../utils/generatePressKitPdf'
 export function MediaPressKit() {
   return (
     <SectionWrapper id="press" background="white" ariaLabel="Media and press kit">
-      <div className="grid lg:grid-cols-2 gap-12 items-start">
-        <AnimatedReveal>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
+      <div className="grid lg:grid-cols-2 gap-14 lg:gap-16 items-start">
+        <AnimatedReveal className="flex flex-col gap-6">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 pb-4">
             Media & Press Kit
           </h2>
-          <p className="text-navy-600 font-body mb-8">
+          <p className="text-navy-600 font-body pb-10">
             Professional assets for media, events, and partnerships. Technical rider and stage requirements available upon request.
           </p>
           <div className="aspect-[3/5] max-w-sm rounded-2xl overflow-hidden bg-navy-100 shadow-premium">
@@ -27,9 +27,9 @@ export function MediaPressKit() {
         </AnimatedReveal>
 
         <AnimatedReveal delay={0.1}>
-          <div className="space-y-6">
+          <div className="space-y-8">
             <div className="p-6 rounded-xl bg-cream border border-navy-100">
-              <h3 className="font-display text-lg font-semibold text-navy-900 mb-2">
+              <h3 className="font-display text-lg font-semibold text-navy-900 pb-2">
                 Short bio
               </h3>
               <p className="font-body text-navy-600 text-sm leading-relaxed">
@@ -76,11 +76,11 @@ export function MediaPressKit() {
             </div>
             <div className="pt-6 border-t border-navy-100 space-y-3">
               <div className="flex items-start gap-3">
-                <HiDocumentText className="w-5 h-5 text-navy-600 flex-shrink-0 mt-0.5" aria-hidden />
+                <HiDocumentText className="w-5 h-5 text-navy-600 flex-shrink-0 pt-0.5" aria-hidden />
                 <p className="font-body text-navy-600 text-sm">{pressKit.techRiderNote}</p>
               </div>
               <div className="flex items-start gap-3">
-                <HiCog className="w-5 h-5 text-navy-600 flex-shrink-0 mt-0.5" aria-hidden />
+                <HiCog className="w-5 h-5 text-navy-600 flex-shrink-0 pt-0.5" aria-hidden />
                 <p className="font-body text-navy-600 text-sm">{pressKit.stageRequirementsNote}</p>
               </div>
             </div>

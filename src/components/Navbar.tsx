@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { HiMenuAlt3, HiX } from 'react-icons/hi'
 import { navLinks, images } from '../data/content'
@@ -6,31 +7,8 @@ import { Container } from '../ui/Container'
 
 export function Navbar() {
   const [isMobileOpen, setMobileOpen] = useState(false)
-  const [isOnHero, setIsOnHero] = useState(true)
-  const [activeSection, setActiveSection] = useState<string>('hero')
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY
-      const heroHeight = typeof window !== 'undefined' ? window.innerHeight * 0.85 : 800
-      setIsOnHero(scrollY < heroHeight)
-
-      const viewportMiddle = scrollY + window.innerHeight * 0.35
-      let current = 'hero'
-      navLinks.forEach((link) => {
-        const id = link.href.slice(1)
-        const el = document.getElementById(id)
-        if (el) {
-          const top = el.getBoundingClientRect().top + scrollY
-          if (top <= viewportMiddle) current = id
-        }
-      })
-      setActiveSection(current)
-    }
-    handleScroll()
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  const location = useLocation()
+  const isOnHome = location.pathname === '/'
 
   useEffect(() => {
     if (isMobileOpen) document.body.style.overflow = 'hidden'
@@ -38,20 +16,25 @@ export function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [isMobileOpen])
 
+  const isActive = (href: string) => {
+    if (href === '/') return location.pathname === '/'
+    return location.pathname === href || location.pathname.startsWith(href + '/')
+  }
+
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-        isOnHero
+        isOnHome
           ? 'bg-white shadow-md border-b border-navy-100/80'
           : 'bg-white/70 backdrop-blur-xl shadow-card'
       }`}
     >
       <Container as="nav" className="flex items-center justify-between h-16 sm:h-20">
-        <a
-          href="#hero"
+        <Link
+          to="/"
           className="flex items-center shrink-0 hover:opacity-90 transition-opacity"
           aria-label="Patrick Byishimo — Home"
         >
@@ -60,29 +43,35 @@ export function Navbar() {
             alt="Patrick Byishimo"
             className="h-14 sm:h-16 w-auto object-contain"
           />
-        </a>
+        </Link>
 
-        <ul className="hidden md:flex items-center gap-6">
+        <ul className="hidden md:flex items-center gap-4 xl:gap-6">
           {navLinks.map((link) => (
             <li key={link.href}>
-              {link.href === '#booking' ? (
-                <a
-                  href={link.href}
-                  className="inline-flex items-center justify-center min-h-[40px] px-5 py-2.5 rounded-xl font-body text-sm font-semibold bg-navy-800 text-cream hover:bg-navy-700 transition-colors shadow-md border border-navy-700"
+              {link.label === 'Booking' ? (
+                <NavLink
+                  to={link.href}
+                  className={({ isActive: active }) =>
+                    `inline-flex items-center justify-center min-h-[40px] px-5 py-2.5 rounded-xl font-body text-sm font-semibold transition-colors shadow-md border ${
+                      active
+                        ? 'bg-navy-800 text-cream border-navy-700'
+                        : 'bg-navy-800 text-cream hover:bg-navy-700 border-navy-700'
+                    }`
+                  }
                 >
                   {link.label}
-                </a>
+                </NavLink>
               ) : (
-                <a
-                  href={link.href}
-                  className={`font-body text-sm font-medium transition-colors ${
-                    activeSection === link.href.slice(1)
-                      ? 'text-navy-900 font-semibold'
-                      : 'text-navy-700 hover:text-navy-900'
-                  }`}
+                <NavLink
+                  to={link.href}
+                  className={({ isActive: active }) =>
+                    `font-body text-sm font-medium transition-colors ${
+                      active ? 'text-navy-900 font-semibold' : 'text-navy-700 hover:text-navy-900'
+                    }`
+                  }
                 >
                   {link.label}
-                </a>
+                </NavLink>
               )}
             </li>
           ))}
@@ -104,31 +93,29 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className={`md:hidden border-t border-navy-100/80 ${isOnHero ? 'bg-white' : 'bg-white/70 backdrop-blur-xl'}`}
+            className={`md:hidden border-t border-navy-100/80 ${isOnHome ? 'bg-white' : 'bg-white/70 backdrop-blur-xl'}`}
           >
             <ul className="px-4 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  {link.href === '#booking' ? (
-                    <a
-                      href={link.href}
+                  {link.label === 'Booking' ? (
+                    <Link
+                      to={link.href}
                       className="inline-flex items-center justify-center min-h-[48px] px-5 py-3 rounded-xl font-body text-sm font-semibold bg-navy-800 text-cream hover:bg-navy-700 transition-colors mt-2"
                       onClick={() => setMobileOpen(false)}
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   ) : (
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className={`block py-2 font-medium ${
-                        activeSection === link.href.slice(1)
-                          ? 'text-navy-900 font-semibold'
-                          : 'text-navy-800'
+                        isActive(link.href) ? 'text-navy-900 font-semibold' : 'text-navy-800'
                       }`}
                       onClick={() => setMobileOpen(false)}
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   )}
                 </li>
               ))}

@@ -3,19 +3,22 @@ import { AnimatedReveal } from '../ui/AnimatedReveal'
 import { Card } from '../ui/Card'
 import { tracks } from '../data/content'
 import { FaSpotify, FaApple, FaYoutube } from 'react-icons/fa'
+import { SiAudiomack } from 'react-icons/si'
+import { HiMusicalNote } from 'react-icons/hi2'
 
 function StreamingIcon({ platform, className = '' }: { platform: string; className?: string }) {
   const iconMap: Record<string, React.ReactNode> = {
     Spotify: <FaSpotify className="w-5 h-5" />,
     'Apple Music': <FaApple className="w-5 h-5" />,
     'YouTube Music': <FaYoutube className="w-5 h-5" />,
+    Audiomack: <SiAudiomack className="w-5 h-5" />,
   }
-  return <span className={`text-navy-600 ${className}`}>{iconMap[platform] ?? null}</span>
+  return <span className={`text-navy-600 ${className}`}>{iconMap[platform] ?? <HiMusicalNote className="w-5 h-5" />}</span>
 }
 
 export function MusicPortfolio() {
   return (
-    <SectionWrapper id="music" background="white" ariaLabel="Music portfolio">
+    <SectionWrapper id="music" background="white" ariaLabel="Music portfolio" attachHeader>
       <AnimatedReveal>
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
           Music Portfolio
@@ -25,7 +28,7 @@ export function MusicPortfolio() {
         </p>
       </AnimatedReveal>
 
-      <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+      <div className="mt-14 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch">
         {tracks.map((track, i) => (
           <AnimatedReveal key={track.id} delay={i * 0.1} className="h-full">
             <Card className="h-full flex flex-col">
