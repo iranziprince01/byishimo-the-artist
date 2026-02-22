@@ -20,7 +20,7 @@ export const siteMeta = {
   location: '7412 174 Avenue NW, Edmonton, Alberta, Canada',
   origin: 'Rwanda',
   languages: ['Kinyarwanda', 'English', 'French'],
-  email: 'contact@patrickbyishimo.com',
+  email: 'contact@byishimomusic.com',
   phone: '+1 (780) 200-9912',
   /** Registered business */
   businessName: 'Patrick Byishimo Music',
@@ -195,7 +195,7 @@ export const pressKit = {
   businessName: 'Patrick Byishimo Music',
   businessType: 'Gospel Music production, publishing & entertainment services',
   location: '7412 174 Avenue NW, Edmonton, Alberta, Canada',
-  contactEmail: 'contact@patrickbyishimo.com',
+  contactEmail: 'contact@byishimomusic.com',
   phone: '+1 (780) 200-9912',
   techRiderNote: 'Technical rider available upon request.',
   stageRequirementsNote: 'Stage and production requirements provided with booking confirmation.',
