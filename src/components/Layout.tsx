@@ -17,7 +17,7 @@ export function Layout() {
       <Navbar />
       <main
         id="main-content"
-        className="m-0"
+        className="m-0 min-w-0 w-full"
       >
         <Outlet />
       </main>

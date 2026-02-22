@@ -26,7 +26,7 @@ export function StayUpdated({ variant = 'default' }: StayUpdatedProps) {
           </p>
           <p className="text-navy-500 font-body text-xs leading-relaxed">
             <strong className="text-navy-700">Mailing list coming soon.</strong> Our sign-up and notification system is in development. For now, follow us on social media or reach out at{' '}
-            <a href={`mailto:${siteMeta.email}`} className="text-navy-700 font-medium hover:underline">
+            <a href={`mailto:${siteMeta.email}`} className="text-navy-700 font-medium hover:underline break-all">
               {siteMeta.email}
             </a>
             {' '}to be kept in the loop.

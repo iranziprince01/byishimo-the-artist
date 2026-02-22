@@ -41,7 +41,7 @@ export function MusicPortfolio() {
                   allowFullScreen
                 />
               </div>
-              <div className="p-6 flex flex-col flex-1 min-h-0">
+              <div className="p-4 sm:p-6 flex flex-col flex-1 min-h-0">
                 <p className="text-navy-600 font-body text-sm">{track.releaseDate}</p>
                 <h3 className="font-display text-xl font-semibold text-navy-900 mt-1.5">
                   {track.title}
@@ -55,7 +55,7 @@ export function MusicPortfolio() {
                         <a
                           key={link.platform}
                           href={link.url}
-                          className="group p-2.5 rounded-xl bg-navy-50/80 text-navy-700 hover:bg-navy-800 hover:text-cream border border-navy-100 hover:border-navy-700 transition-colors"
+                          className="group p-3 sm:p-2.5 rounded-xl bg-navy-50/80 text-navy-700 hover:bg-navy-800 hover:text-cream border border-navy-100 hover:border-navy-700 transition-colors min-h-[44px] min-w-[44px] inline-flex items-center justify-center"
                           aria-label={`Listen on ${link.platform}`}
                         >
                           <StreamingIcon platform={link.platform} className="group-hover:text-cream transition-colors" />

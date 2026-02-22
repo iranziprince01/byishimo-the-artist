@@ -21,7 +21,7 @@ export function MissionBlock() {
             {siteMeta.mission}
           </p>
         </AnimatedReveal>
-        <ul className="grid sm:grid-cols-3 gap-8">
+        <ul className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10">
           {pillars.map(({ icon: Icon, title, text }) => (
             <AnimatedReveal key={title}>
               <li className="text-center">

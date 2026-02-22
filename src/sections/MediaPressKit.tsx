@@ -8,7 +8,7 @@ import { downloadPressKitPdf } from '../utils/generatePressKitPdf'
 export function MediaPressKit() {
   return (
     <SectionWrapper id="press" background="white" ariaLabel="Media and press kit">
-      <div className="grid lg:grid-cols-2 gap-14 lg:gap-16 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-start min-w-0">
         <AnimatedReveal className="flex flex-col gap-6">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 pb-4">
             Media & Press Kit
@@ -16,7 +16,7 @@ export function MediaPressKit() {
           <p className="text-navy-600 font-body pb-10">
             Professional assets for media, events, and partnerships. Technical rider and stage requirements available upon request.
           </p>
-          <div className="aspect-[3/5] max-w-sm rounded-2xl overflow-hidden bg-navy-100 shadow-premium">
+          <div className="aspect-[3/5] w-full max-w-sm mx-auto lg:mx-0 rounded-2xl overflow-hidden bg-navy-100 shadow-premium">
             <img
               src={images.headshot}
               alt="Patrick Byishimo — Professional headshot"

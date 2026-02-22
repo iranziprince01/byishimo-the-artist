@@ -5,15 +5,19 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply font-body text-navy-800 antialiased;
     font-feature-settings: "kern" 1, "liga" 1;
+    overflow-x: hidden;
   }
 
   #main-content {
     margin: 0;
+    min-width: 0;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4 {

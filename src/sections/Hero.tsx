@@ -30,7 +30,7 @@ export function Hero() {
         {/* Content + Right image */}
         <div className="relative z-10 w-full flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16 px-3 xs:px-4 sm:px-6 lg:px-8 py-24 md:py-0 min-h-screen">
         {/* Left: Text + CTAs */}
-      <div className="flex flex-col justify-center w-full max-w-2xl order-2 md:order-1">
+      <div className="flex flex-col justify-center w-full max-w-2xl min-w-0 order-2 md:order-1">
         <motion.p
           initial={{ opacity: 0, x: -24 }}
           animate={{ opacity: 1, x: 0 }}

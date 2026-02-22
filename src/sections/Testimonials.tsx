@@ -16,10 +16,10 @@ export function Testimonials() {
         </p>
       </AnimatedReveal>
 
-      <div className="pt-14 sm:pt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="pt-10 sm:pt-14 md:pt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
         {testimonials.map((t, i) => (
           <AnimatedReveal key={t.id} delay={i * 0.1}>
-            <Card className="p-6 h-full flex flex-col gap-4">
+            <Card className="p-4 sm:p-6 h-full flex flex-col gap-4">
               <MdFormatQuote className="w-10 h-10 text-navy-400 pb-4" aria-hidden />
               <blockquote className="font-body text-navy-700 leading-relaxed flex-1">
                 &ldquo;{t.quote}&rdquo;

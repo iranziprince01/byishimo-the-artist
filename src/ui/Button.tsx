@@ -38,7 +38,7 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonPr
     ref
   ) => {
     const base =
-      'inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3 sm:px-6 rounded-xl transition-all duration-200 focus:outline-none hover:scale-[1.02] active:scale-[0.98]'
+      'inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3 sm:px-6 rounded-xl transition-all duration-200 focus:outline-none hover:scale-[1.02] active:scale-[0.98] touch-manipulation'
 
     const combined = `${base} ${variantStyles[variant]} ${className}`
 

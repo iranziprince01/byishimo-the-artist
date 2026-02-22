@@ -45,7 +45,7 @@ export function SectionWrapper({
       className={`${paddingClass} ${bgMap[background]} ${className}`}
       aria-label={ariaLabel}
     >
-      <div className="flex justify-center">
+      <div className="flex justify-center min-w-0">
         <Container>{children}</Container>
       </div>
     </section>

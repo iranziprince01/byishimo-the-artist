@@ -29,29 +29,29 @@ export function Footer() {
             <p className="text-cream/50 font-body text-xs mt-0.5">
               {siteMeta.businessName}
             </p>
-            <p className="mt-3 font-body text-sm text-cream/80 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+            <div className="mt-3 font-body text-sm text-cream/80 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-x-4 sm:gap-y-1 sm:items-baseline">
               <span>
-                <span className="text-cream/50 text-xs font-medium uppercase tracking-wider mr-1">Email:</span>
-                <a href={`mailto:${siteMeta.email}`} className="hover:text-white transition-colors">
+                <span className="text-cream/50 text-xs font-medium uppercase tracking-wider block sm:inline sm:mr-1">Email:</span>
+                <a href={`mailto:${siteMeta.email}`} className="hover:text-white transition-colors break-all inline-block py-2 sm:py-0 -my-1 sm:my-0">
                   {siteMeta.email}
                 </a>
               </span>
-              <span className="text-cream/40">·</span>
+              <span className="hidden sm:inline text-cream/40">·</span>
               <span>
-                <span className="text-cream/50 text-xs font-medium uppercase tracking-wider mr-1">Contact:</span>
-                <a href={`tel:${siteMeta.phone.replace(/\s|\(|\)|-/g, '')}`} className="hover:text-white transition-colors">
+                <span className="text-cream/50 text-xs font-medium uppercase tracking-wider block sm:inline sm:mr-1">Contact:</span>
+                <a href={`tel:${siteMeta.phone.replace(/\s|\(|\)|-/g, '')}`} className="hover:text-white transition-colors inline-flex items-center py-2 sm:py-0 -my-1 sm:my-0">
                   {siteMeta.phone}
                 </a>
               </span>
-              <span className="text-cream/40">·</span>
-              <span>
-                <span className="text-cream/50 text-xs font-medium uppercase tracking-wider mr-1">Address:</span>
-                <span className="text-cream/80">{siteMeta.location}</span>
+              <span className="hidden sm:inline text-cream/40">·</span>
+              <span className="min-w-0">
+                <span className="text-cream/50 text-xs font-medium uppercase tracking-wider block sm:inline sm:mr-1">Address:</span>
+                <span className="text-cream/80 break-words">{siteMeta.location}</span>
               </span>
-            </p>
+            </div>
           </div>
           <nav aria-label="Footer navigation" className="md:pt-0 flex-1 min-w-0 w-full">
-            <div className="grid grid-cols-3 w-full gap-x-6 sm:gap-x-10 lg:gap-x-12 gap-y-1">
+            <div className="grid grid-cols-2 sm:grid-cols-3 w-full gap-x-4 gap-y-4 sm:gap-x-10 sm:gap-y-1 lg:gap-x-12">
               {[
                 [footerNavLinks[0], footerNavLinks[1], footerNavLinks[2]], // Home, About, Music
                 [footerNavLinks[3], footerNavLinks[4]],                     // Experience, Booking

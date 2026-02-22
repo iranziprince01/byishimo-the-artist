@@ -25,9 +25,9 @@ export function RecentHighlights() {
         </p>
       </AnimatedReveal>
 
-      <div className="pt-14 sm:pt-16 relative">
+      <div className="pt-10 sm:pt-14 md:pt-16 relative">
         <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-navy-200 -translate-x-px hidden sm:block" aria-hidden />
-        <ul className="flex flex-col gap-10 sm:gap-14">
+        <ul className="flex flex-col gap-8 sm:gap-10 md:gap-14">
           {highlights.map((item, i) => {
             const config = typeConfig[item.type] ?? typeConfig.community
             return (

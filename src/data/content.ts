@@ -127,23 +127,23 @@ export const testimonials: Testimonial[] = [
   {
     id: '1',
     quote: 'Patrick brings a rare combination of authenticity and excellence. His worship creates a bridge that unites our congregation in a powerful way.',
-    author: 'Pastor James M.',
-    role: 'Senior Pastor',
-    organization: 'Edmonton Community Church',
+    author: 'Stephen London',
+    role: 'Bishop',
+    organization: 'Anglican Diocese of Edmonton',
   },
   {
     id: '2',
     quote: 'Working with Patrick for our conference was seamless. He is professional, prepared, and his heart for worship is evident in every moment.',
-    author: 'Sarah K.',
-    role: 'Worship Director',
-    organization: 'Prairie Worship Collective',
+    author: 'Rev. Jonathan Crane',
+    role: 'Archdeacon',
+    organization: 'Anglican Diocese of Edmonton',
   },
   {
     id: '3',
     quote: 'His ability to lead across languages in one service was transformative for our diverse community. Highly recommend for international events.',
-    author: 'Rev. David L.',
-    role: 'Event Organizer',
-    organization: 'Multicultural Ministry Network',
+    author: 'Stevon Artis',
+    role: 'Singer, Producer, Audio & Video Production Engineer',
+    organization: undefined,
   },
 ]
 

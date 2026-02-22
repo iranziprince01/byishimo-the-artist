@@ -5,7 +5,7 @@ import { bioParagraphs, images } from '../data/content'
 export function Biography() {
   return (
     <SectionWrapper id="about" background="cream" ariaLabel="Professional biography" attachHeader>
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center min-w-0">
         <AnimatedReveal className="order-2 lg:order-1 flex justify-center lg:justify-start">
           <div className="rounded-2xl overflow-hidden shadow-premium aspect-[3/5] max-w-md w-full">
             <img
@@ -27,7 +27,7 @@ export function Biography() {
           <div className="grid gap-10 max-w-3xl pt-6">
             {bioParagraphs.map((paragraph, i) => (
               <AnimatedReveal key={i} delay={i * 0.1}>
-                <p className="font-body text-navy-700 text-lg leading-relaxed text-justify">
+                <p className="font-body text-navy-700 text-base sm:text-lg leading-relaxed text-left sm:text-justify">
                   {paragraph}
                 </p>
               </AnimatedReveal>

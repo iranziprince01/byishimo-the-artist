@@ -15,25 +15,25 @@ export function ConnectCTA() {
           <p className="text-navy-600 font-body text-lg mb-8">
             For booking, partnerships, media, or general inquiries — we would like to hear from you.
           </p>
-          <div className="flex flex-wrap justify-center gap-6 text-navy-700 font-body text-sm">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-navy-700 font-body text-sm">
             <a
               href={`mailto:${siteMeta.email}`}
-              className="inline-flex items-center gap-2 hover:text-navy-900 transition-colors"
+              className="inline-flex items-center gap-2 hover:text-navy-900 transition-colors min-h-[44px] sm:min-h-0 py-2 sm:py-0 break-all text-center justify-center sm:justify-start"
             >
-              <HiEnvelope className="w-5 h-5" />
-              {siteMeta.email}
+              <HiEnvelope className="w-5 h-5 shrink-0" />
+              <span className="break-all">{siteMeta.email}</span>
             </a>
             <a
               href={`tel:${siteMeta.phone.replace(/\s|\(|\)|-/g, '')}`}
-              className="inline-flex items-center gap-2 hover:text-navy-900 transition-colors"
+              className="inline-flex items-center gap-2 hover:text-navy-900 transition-colors min-h-[44px] sm:min-h-0 py-2 sm:py-0"
             >
-              <HiPhone className="w-5 h-5" />
+              <HiPhone className="w-5 h-5 shrink-0" />
               {siteMeta.phone}
             </a>
           </div>
           <Link
             to="/booking"
-            className="mt-8 inline-flex items-center justify-center gap-2 min-h-[48px] px-6 py-3 rounded-xl font-semibold text-navy-900 bg-[#ffe600] hover:bg-[#ffec33] transition-colors"
+            className="mt-8 inline-flex items-center justify-center gap-2 min-h-[48px] min-w-[200px] sm:min-w-0 px-6 py-3 rounded-xl font-semibold text-navy-900 bg-[#ffe600] hover:bg-[#ffec33] transition-colors touch-manipulation"
           >
             <HiCalendar className="w-5 h-5" />
             Book or inquire

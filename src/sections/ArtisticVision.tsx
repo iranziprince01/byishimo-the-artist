@@ -18,12 +18,12 @@ export function ArtisticVision() {
         </p>
       </AnimatedReveal>
 
-      <div className="pt-14 sm:pt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="pt-10 sm:pt-14 md:pt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {visionPoints.map((point, i) => {
           const Icon = icons[i % icons.length]
           return (
             <AnimatedReveal key={point.title} delay={i * 0.08}>
-<Card className="p-6 h-full flex flex-col gap-4">
+<Card className="p-4 sm:p-6 h-full flex flex-col gap-4">
                 <div className="w-12 h-12 rounded-xl bg-navy-100 text-navy-700 flex items-center justify-center shrink-0">
                 <Icon className="w-6 h-6" />
                 </div>

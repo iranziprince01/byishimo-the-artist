@@ -95,7 +95,7 @@ export function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className={`md:hidden border-t border-navy-100/80 ${isOnHome ? 'bg-white' : 'bg-white/70 backdrop-blur-xl'}`}
           >
-            <ul className="px-4 py-6 flex flex-col gap-4">
+            <ul className="px-4 py-6 flex flex-col gap-2 sm:gap-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   {link.label === 'Booking' ? (
