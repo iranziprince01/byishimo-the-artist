@@ -34,11 +34,11 @@ export function SectionWrapper({
   const isHome = useLocation().pathname === '/'
   const paddingClass = isHome
     ? attachHeader
-      ? 'pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 lg:pb-24'
-      : 'py-16 sm:py-20 lg:py-24'
+      ? 'pt-28 sm:pt-32 lg:pt-40 pb-28 sm:pb-32 lg:pb-40'
+      : 'py-20 sm:py-24 lg:py-28'
     : attachHeader
-      ? 'pt-28 sm:pt-32 lg:pt-40 pb-20 sm:pb-24 lg:pb-32'
-      : 'py-20 sm:py-24 lg:py-32'
+      ? 'pt-28 sm:pt-32 lg:pt-40 pb-28 sm:pb-32 lg:pb-40'
+      : 'py-24 sm:py-28 lg:py-36'
   return (
     <section
       id={id}

@@ -18,7 +18,7 @@ export function WhyPartner() {
           <h2 className="font-display text-xl sm:text-2xl font-bold text-navy-900 mb-4">
             Why partner with {siteMeta.businessName}
           </h2>
-          <p className="text-navy-600 font-body text-sm mb-8">
+          <p className="text-navy-600 font-body text-sm mb-8 text-justify hyphens-auto break-words">
             We bring a professional, scalable approach to Gospel music and ministry — ideal for churches, festivals, labels, and funding partners.
           </p>
           <ul className="space-y-3">

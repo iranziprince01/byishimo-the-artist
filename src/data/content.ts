@@ -13,14 +13,14 @@ export const images = {
 
 export const siteMeta = {
   artistName: 'Patrick Byishimo',
-  tagline: 'International Gospel Artist · Worship Leader · Songwriter',
-  mission: 'Leading worship and Gospel music globally with excellence, authenticity, and a heart for the Church worldwide.',
-  heroSummary: 'International Gospel artist bridging cultures through music—with excellence, authenticity, and a heart for the global Church. Available for concerts, conferences, and partnerships.',
+  tagline: 'Multilingual Folk & World Artist · Award-Winning Songwriter · Energetic Performer',
+  mission: 'Multilingual folk and world music that brings people together through storytelling, cultural experience, and acoustic expression.',
+  heroSummary: 'Patrick Byishimo is a multilingual folk and world music artist, award-winning songwriter, and energetic performer based in Edmonton, Canada. Originally from the Democratic Republic of Congo, Patrick\'s musical journey began in East Africa and continued in Canada, where he has developed a distinctive voice rooted in storytelling, cultural experience, and acoustic expression.',
   location: '7412 174 Avenue NW, Edmonton, Alberta, Canada',
   email: 'contact@byishimomusic.com',
   phone: '+1 (780) 200-9912',
   businessName: 'Patrick Byishimo Music',
-  businessType: 'Gospel Music production, publishing & entertainment services',
+  businessType: 'Folk & World Music production, publishing & entertainment services',
 }
 
 /** Main header nav: 5 items. Other pages linked from Home and footer. */
@@ -41,9 +41,9 @@ export const footerNavLinks: NavLink[] = [
 
 /** Replace with actual artist/song URLs when available. Only major platforms: YouTube, Spotify, Apple Music, Audiomack. */
 const defaultStreamingLinks = [
-  { platform: 'Spotify', url: '#' },
-  { platform: 'Apple Music', url: '#' },
-  { platform: 'YouTube Music', url: '#' },
+  { platform: 'Spotify', url: 'https://open.spotify.com/artist/6urriaUMgoR9Z9VMZ7Ptbp' },
+  { platform: 'Apple Music', url: 'https://music.apple.com/us/album/ndakwizeye-single/1881205558' },
+  { platform: 'YouTube Music', url: 'https://www.youtube.com/@patrickbyishimooffical' },
   { platform: 'Audiomack', url: '#' },
 ]
 
@@ -151,14 +151,14 @@ export const socialLinks: SocialLink[] = [
   { platform: 'Instagram', url: 'https://www.instagram.com/byishimopatrick1/', icon: 'instagram' },
   { platform: 'Facebook', url: 'https://www.facebook.com/byishimo.patrick.10', icon: 'facebook' },
   { platform: 'YouTube', url: 'https://www.youtube.com/@patrickbyishimooffical', icon: 'youtube' },
-  { platform: 'Spotify', url: '#', icon: 'spotify', comingSoon: true },
+  { platform: 'Spotify', url: 'https://open.spotify.com/artist/6urriaUMgoR9Z9VMZ7Ptbp', icon: 'spotify' },
 ]
 
 export const bioParagraphs = [
-  'Patrick Byishimo is an international Gospel artist, worship leader, and songwriter. His ministry spans continents—serving the Church through concerts, conferences, and recorded music with a focus on excellence and global reach.',
-  'Patrick has dedicated his craft to multilingual worship and Gospel music that resonates across cultures. His music blends contemporary Gospel and worship with diverse influences, creating a distinct voice for audiences worldwide.',
-  'His work reflects a commitment to professional standards: from church ministry to conference stages, live streams, and streaming releases. Patrick Byishimo Music operates as a registered business focused on production, publishing, and entertainment services.',
-  'The vision is clear: scale music and ministry internationally—through releases, partnerships, and platforms that extend reach while maintaining artistic and spiritual integrity. Ideal for grant providers, concert promoters, and ministry partners seeking a professional Gospel artist.',
+  'Patrick Byishimo (pronounced Bee-YEE-shee-mo, meaning "happy") is a performing artist, songwriter, and instrumentalist from the Democratic Republic of Congo, now based in Edmonton, Alberta.',
+  'His musical journey began in a refugee camp in Nairobi, Kenya, where he started singing at age ten and received a year of musical mentorship with support from the United Nations Refugee Agency and the Danish Refugee Council. There, he learned to play the piano, guitar, and percussion, while also developing his skills as a songwriter.',
+  'After relocating to Canada, Patrick continued to develop his musical talents through performance, collaboration, and community involvement. His work incorporates folk, world, and community music traditions, expressed in multiple languages including Kinyarwanda, Swahili, French, and English.',
+  'Patrick\'s songs reflect rich cultural narratives and personal experience, and his live performances blend heartfelt engagement with vibrant musicality. He has shared stages with artists from diverse backgrounds and continues to pursue opportunities that expand his artistic reach and audience connection.',
 ]
 
 export const visionPoints = [
@@ -189,10 +189,10 @@ export const visionPoints = [
 ]
 
 export const pressKit = {
-  shortBio: 'Patrick Byishimo is an international Gospel artist, worship leader, and songwriter. He leads and creates worship and Gospel music for global audiences, blending contemporary Gospel with diverse cultural influences. Patrick Byishimo Music is a registered business offering production, publishing, and entertainment services.',
-  genre: 'Gospel / Worship / International',
+  shortBio: 'Patrick Byishimo (pronounced Bee-YEE-shee-mo, meaning "happy") is a performing artist, songwriter, and instrumentalist from the Democratic Republic of Congo, now based in Edmonton, Alberta. His music blends folk, world, and community traditions with lyrical storytelling in multiple languages including Kinyarwanda, Swahili, French, and English.',
+  genre: 'Folk / World / Community / Multilingual',
   businessName: 'Patrick Byishimo Music',
-  businessType: 'Gospel Music production, publishing & entertainment services',
+  businessType: 'Folk & World Music production, publishing & entertainment services',
   location: '7412 174 Avenue NW, Edmonton, Alberta, Canada',
   contactEmail: 'contact@byishimomusic.com',
   phone: '+1 (780) 200-9912',

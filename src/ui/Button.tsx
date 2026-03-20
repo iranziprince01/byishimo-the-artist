@@ -37,6 +37,7 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonPr
     },
     ref
   ) => {
+    const isExternalHref = /^https?:\/\//.test(href)
     const base =
       'inline-flex items-center justify-center gap-2 min-h-[48px] px-5 py-3 sm:px-6 rounded-xl transition-all duration-200 focus:outline-none hover:scale-[1.02] active:scale-[0.98] touch-manipulation'
 
@@ -65,6 +66,8 @@ export const Button = forwardRef<HTMLAnchorElement | HTMLButtonElement, ButtonPr
       <a
         ref={ref as React.Ref<HTMLAnchorElement>}
         href={href}
+        target={isExternalHref ? '_blank' : undefined}
+        rel={isExternalHref ? 'noopener noreferrer' : undefined}
         {...commonProps}
         {...(props as React.AnchorHTMLAttributes<HTMLAnchorElement>)}
       >

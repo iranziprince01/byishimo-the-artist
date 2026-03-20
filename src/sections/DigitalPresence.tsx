@@ -31,8 +31,8 @@ export function DigitalPresence() {
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
             Connect & Listen
           </h2>
-          <p className="text-cream/90 font-body text-lg mb-8">
-            Stream on Spotify, watch on YouTube, and follow on social media. Join the mailing list for new releases and updates.
+          <p className="text-cream/90 font-body text-lg mb-8 text-justify hyphens-auto break-words">
+            Stream on Spotify and Apple Music, watch on YouTube, and listen on Audiomack. Join the mailing list for new releases and updates.
           </p>
           <div className="flex flex-wrap gap-4">
             {socialLinks.map((link) =>
@@ -72,7 +72,7 @@ export function DigitalPresence() {
               />
             </div>
             <p className="text-cream/80 font-body text-sm mb-4">
-              <a href="https://www.youtube.com/@patrickbyishimooffical" target="_blank" rel="noopener noreferrer" className="text-goldLight hover:text-white underline">Subscribe on YouTube</a> for live worship sessions and new music videos.
+              <a href="https://www.youtube.com/@patrickbyishimooffical" target="_blank" rel="noopener noreferrer" className="text-goldLight hover:text-white underline">Subscribe on YouTube</a> for live performances and new music videos.
             </p>
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
               <label htmlFor="newsletter-email" className="sr-only">

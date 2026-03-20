@@ -20,8 +20,8 @@ export function Biography() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 pb-4">
               Professional Biography
             </h2>
-            <p className="text-navy-600 font-body text-sm uppercase tracking-wider">
-              Artistic roots · Ministry · Vision
+            <p className="text-navy-600 font-body text-sm tracking-wider">
+              Voice, Story &amp; Strings, and Across Languages and Cultures
             </p>
           </AnimatedReveal>
           <div className="grid gap-10 max-w-3xl pt-6">

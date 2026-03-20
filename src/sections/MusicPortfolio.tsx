@@ -23,8 +23,8 @@ export function MusicPortfolio() {
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
           Music Portfolio
         </h2>
-        <p className="text-navy-600 font-body text-lg max-w-2xl">
-          Featured singles and worship releases. Available on major streaming platforms.
+        <p className="text-navy-600 font-body text-lg max-w-2xl text-justify hyphens-auto break-words">
+          Patrick's music combines acoustic folk sensibilities with global influences, featuring lyrical storytelling in four languages. His singles and recordings demonstrate a dedication to emotional depth, melodic clarity, and cross-cultural expression. Explore Patrick's latest releases below and connect on streaming platforms.
         </p>
       </AnimatedReveal>
 
@@ -55,6 +55,8 @@ export function MusicPortfolio() {
                         <a
                           key={link.platform}
                           href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="group p-3 sm:p-2.5 rounded-xl bg-navy-50/80 text-navy-700 hover:bg-navy-800 hover:text-cream border border-navy-100 hover:border-navy-700 transition-colors min-h-[44px] min-w-[44px] inline-flex items-center justify-center"
                           aria-label={`Listen on ${link.platform}`}
                         >

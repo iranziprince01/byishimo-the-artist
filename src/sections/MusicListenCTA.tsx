@@ -13,13 +13,13 @@ export function MusicListenCTA() {
             Listen everywhere
           </h2>
           <p className="text-navy-600 font-body text-sm mb-6">
-            {siteMeta.artistName} music is available on Spotify, Apple Music, YouTube Music, and Audiomack. Follow and save to get new releases first.
+            {siteMeta.artistName}'s music combines acoustic folk sensibilities with global influences, featuring lyrical storytelling in four languages. Available on Spotify, Apple Music, YouTube Music, and Audiomack. Follow and save to get new releases first.
           </p>
           <h3 className="font-display font-semibold text-navy-900 mb-3">
             Book for live events
           </h3>
           <p className="text-navy-600 font-body text-sm mb-6">
-            Worship nights, concerts, conferences, and special events — inquire for dates and availability.
+            To inquire about bookings, please use the contact form for dates and availability.
           </p>
           <Link
             to="/booking"

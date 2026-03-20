@@ -13,24 +13,37 @@ export function ConnectCTA() {
             Connect with us
           </h2>
           <p className="text-navy-600 font-body text-lg mb-8">
-            For booking, partnerships, media, or general inquiries — we would like to hear from you.
+            For booking, collaborations, or press inquiries: please reach us using the contact details below.
           </p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-navy-700 font-body text-sm">
             <a
               href={`mailto:${siteMeta.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 hover:text-navy-900 transition-colors min-h-[44px] sm:min-h-0 py-2 sm:py-0 break-all text-center justify-center sm:justify-start"
             >
               <HiEnvelope className="w-5 h-5 shrink-0" />
-              <span className="break-all">{siteMeta.email}</span>
+              <span className="break-all">
+                <span className="text-navy-800 font-medium mr-2">Email:</span>
+                {siteMeta.email}
+              </span>
             </a>
             <a
               href={`tel:${siteMeta.phone.replace(/\s|\(|\)|-/g, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 hover:text-navy-900 transition-colors min-h-[44px] sm:min-h-0 py-2 sm:py-0"
             >
               <HiPhone className="w-5 h-5 shrink-0" />
-              {siteMeta.phone}
+              <span className="break-all">
+                <span className="text-navy-800 font-medium mr-2">Phone:</span>
+                {siteMeta.phone}
+              </span>
             </a>
           </div>
+          <p className="text-navy-600 font-body text-sm mt-6">
+            Follow Patrick on social media for updates, new releases, and live performance announcements.
+          </p>
           <Link
             to="/booking"
             className="mt-8 inline-flex items-center justify-center gap-2 min-h-[48px] min-w-[200px] sm:min-w-0 px-6 py-3 rounded-xl font-semibold text-navy-900 bg-[#ffe600] hover:bg-[#ffec33] transition-colors touch-manipulation"

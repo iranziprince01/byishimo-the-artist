@@ -12,7 +12,7 @@ export function Testimonials() {
           Testimonials
         </h2>
         <p className="text-navy-600 font-body text-lg max-w-2xl">
-          Words from pastors, worship leaders, and event organizers.
+          Words from pastors, music directors, and event organizers.
         </p>
       </AnimatedReveal>
 

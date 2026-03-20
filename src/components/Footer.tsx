@@ -24,26 +24,21 @@ export function Footer() {
               className="h-12 w-auto object-contain"
             />
             <p className="text-cream/70 font-body text-sm mt-1.5">
-              Gospel Artist · Worship Leader · Songwriter
-            </p>
-            <p className="text-cream/50 font-body text-xs mt-0.5">
-              {siteMeta.businessName}
+              Multilingual Folk & World Artist, Award-Winning Songwriter, and Energetic Performer
             </p>
             <div className="mt-3 font-body text-sm text-cream/80 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-x-4 sm:gap-y-1 sm:items-baseline">
               <span>
                 <span className="text-cream/50 text-xs font-medium uppercase tracking-wider block sm:inline sm:mr-1">Email:</span>
-                <a href={`mailto:${siteMeta.email}`} className="hover:text-white transition-colors break-all inline-block py-2 sm:py-0 -my-1 sm:my-0">
+                <a href={`mailto:${siteMeta.email}`} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors break-all inline-block py-2 sm:py-0 -my-1 sm:my-0">
                   {siteMeta.email}
                 </a>
               </span>
-              <span className="hidden sm:inline text-cream/40">·</span>
               <span>
                 <span className="text-cream/50 text-xs font-medium uppercase tracking-wider block sm:inline sm:mr-1">Contact:</span>
-                <a href={`tel:${siteMeta.phone.replace(/\s|\(|\)|-/g, '')}`} className="hover:text-white transition-colors inline-flex items-center py-2 sm:py-0 -my-1 sm:my-0">
+                <a href={`tel:${siteMeta.phone.replace(/\s|\(|\)|-/g, '')}`} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors inline-flex items-center py-2 sm:py-0 -my-1 sm:my-0">
                   {siteMeta.phone}
                 </a>
               </span>
-              <span className="hidden sm:inline text-cream/40">·</span>
               <span className="min-w-0">
                 <span className="text-cream/50 text-xs font-medium uppercase tracking-wider block sm:inline sm:mr-1">Address:</span>
                 <span className="text-cream/80 break-words">{siteMeta.location}</span>
@@ -70,14 +65,6 @@ export function Footer() {
                 </div>
               ))}
             </div>
-            <p className="text-cream/50 font-body text-xs mt-2">
-              {siteMeta.businessType}
-            </p>
-            <p className="text-cream/45 font-body text-xs mt-2">
-              Coming soon: <Link to="/branding" className="text-cream/60 hover:text-cream transition-colors">Branding</Link>
-              {' · '}
-              <Link to="/merch" className="text-cream/60 hover:text-cream transition-colors">Merch</Link>
-            </p>
           </nav>
         </div>
         <div className="mt-6 pt-5 border-t border-white/10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">

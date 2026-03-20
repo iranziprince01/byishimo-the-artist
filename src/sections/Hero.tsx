@@ -6,6 +6,13 @@ import { HiPlay, HiCalendar, HiMusicalNote } from 'react-icons/hi2'
 const stagger = (i: number) => ({ delay: i * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] })
 
 export function Hero() {
+  // Two paragraphs so the line length stays attractive on small screens.
+  // Per grant-writer guidance: remove the name from paragraph 1 and start with a capital "A".
+  const heroPara1 =
+    'A multilingual folk and world music artist, award-winning songwriter, and energetic performer based in Edmonton, Canada.'
+  const heroPara2 =
+    "Originally from the Democratic Republic of Congo, Patrick's musical journey began in East Africa and continued in Canada, where he has developed a distinctive voice rooted in storytelling, cultural experience, and acoustic expression."
+
   return (
     <section
       id="hero"
@@ -28,36 +35,32 @@ export function Hero() {
       {/* Hero content area - normal site width (same as Container) */}
       <div className="relative w-full max-w-6xl mx-auto min-h-screen flex flex-col md:flex-row">
         {/* Content + Right image */}
-        <div className="relative z-10 w-full flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16 px-3 xs:px-4 sm:px-6 lg:px-8 py-24 md:py-0 min-h-screen">
+        <div className="relative z-10 w-full flex flex-col md:flex-row items-center gap-8 md:gap-12 lg:gap-16 px-3 xs:px-4 sm:px-6 lg:px-8 pt-28 pb-24 md:pt-20 md:pb-0 min-h-screen">
         {/* Left: Text + CTAs */}
       <div className="flex flex-col justify-center w-full max-w-2xl min-w-0 order-2 md:order-1">
-        <motion.p
-          initial={{ opacity: 0, x: -24 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={stagger(1)}
-          className="text-[#ffe600] font-body text-xs sm:text-sm uppercase tracking-[0.2em] mb-5"
-        >
-          Gospel Artist · Worship Leader · Songwriter
-        </motion.p>
-
         <motion.h1
           initial={{ opacity: 0, x: -24 }}
           animate={{ opacity: 1, x: 0 }}
           transition={stagger(2)}
-          className="font-display text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-[1.08] mb-8"
+          className="font-display text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-[#ffe600] tracking-tight leading-[1.08] mb-7 sm:mb-10 md:mb-12"
         >
           <span className="block">{siteMeta.artistName.split(' ')[0]}</span>
           <span className="block">{siteMeta.artistName.split(' ').slice(1).join(' ')}</span>
         </motion.h1>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, x: -24 }}
           animate={{ opacity: 1, x: 0 }}
           transition={stagger(3)}
           className="text-base sm:text-lg text-white/90 font-body font-light max-w-xl mb-10 sm:mb-14 leading-relaxed"
         >
-          {siteMeta.heroSummary}
-        </motion.p>
+          <p className="block text-justify hyphens-auto break-words">{heroPara1}</p>
+          {heroPara2 && (
+            <p className="block mt-4 text-justify hyphens-auto break-words">
+              {heroPara2}
+            </p>
+          )}
+        </motion.div>
 
         {/* CTAs: white and light gold on dark hero */}
         <motion.div

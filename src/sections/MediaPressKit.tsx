@@ -13,7 +13,7 @@ export function MediaPressKit() {
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 pb-4">
             Media & Press Kit
           </h2>
-          <p className="text-navy-600 font-body pb-10">
+          <p className="text-navy-600 font-body pb-10 text-justify hyphens-auto break-words">
             Professional assets for media, events, and partnerships. Technical rider and stage requirements available upon request.
           </p>
           <div className="aspect-[3/5] w-full max-w-sm mx-auto lg:mx-0 rounded-2xl overflow-hidden bg-navy-100 shadow-premium">
@@ -32,7 +32,7 @@ export function MediaPressKit() {
               <h3 className="font-display text-lg font-semibold text-navy-900 pb-2">
                 Short bio
               </h3>
-              <p className="font-body text-navy-600 text-sm leading-relaxed">
+              <p className="font-body text-navy-600 text-sm leading-relaxed text-justify hyphens-auto break-words">
                 {pressKit.shortBio}
               </p>
             </div>
@@ -52,11 +52,21 @@ export function MediaPressKit() {
               <div className="flex flex-wrap gap-2 items-baseline">
                 <dt className="font-body font-semibold text-navy-800">Contact:</dt>
                 <dd className="font-body">
-                  <a href={`mailto:${pressKit.contactEmail}`} className="text-navy-600 hover:underline">
+                  <a
+                    href={`mailto:${pressKit.contactEmail}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-navy-600 hover:underline"
+                  >
                     {pressKit.contactEmail}
                   </a>
                   {' · '}
-                  <a href={`tel:${pressKit.phone.replace(/\s|\(|\)|-/g, '')}`} className="text-navy-600 hover:underline">
+                  <a
+                    href={`tel:${pressKit.phone.replace(/\s|\(|\)|-/g, '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-navy-600 hover:underline"
+                  >
                     {pressKit.phone}
                   </a>
                 </dd>

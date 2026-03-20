@@ -20,8 +20,11 @@ export function RecentHighlights() {
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 pb-4">
           Recent Highlights
         </h2>
-        <p className="text-navy-600 font-body text-lg max-w-2xl">
-          Live performances, worship conferences, church engagements, and community events.
+        <p className="text-navy-600 font-body text-lg max-w-2xl text-justify hyphens-auto break-words">
+          Patrick Byishimo performs regularly in a range of settings, including community events, festivals, and cultural showcases. His live performances showcase his versatility as a performer and his talent for connecting with audiences through engaging storytelling and spirited musical delivery.
+        </p>
+        <p className="text-navy-600 font-body text-sm max-w-2xl mt-1 text-justify hyphens-auto break-words">
+          To inquire about bookings, please use the contact form.
         </p>
       </AnimatedReveal>
 

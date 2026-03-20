@@ -37,8 +37,8 @@ export function Booking() {
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
             Book Patrick
           </h2>
-          <p className="text-navy-600 font-body text-lg mb-12">
-            For worship leading, concerts, conferences, and events. {siteMeta.businessName} — {siteMeta.businessType}. Fill out the form below or email directly.
+          <p className="text-navy-600 font-body text-lg mb-12 text-justify hyphens-auto break-words">
+            For bookings, concerts, conferences, and events. {siteMeta.businessName} — {siteMeta.businessType}. Fill out the form below or email directly.
           </p>
         </AnimatedReveal>
 
@@ -54,7 +54,12 @@ export function Booking() {
                   {siteMeta.email}
                 </a>
                 {' or call '}
-                <a href={`tel:${siteMeta.phone.replace(/\s|\(|\)|-/g, '')}`} className="text-navy-700 font-medium hover:underline">
+                <a
+                  href={`tel:${siteMeta.phone.replace(/\s|\(|\)|-/g, '')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-navy-700 font-medium hover:underline"
+                >
                   {siteMeta.phone}
                 </a>
               </p>
@@ -138,11 +143,11 @@ export function Booking() {
                 </Button>
                 <p className="text-navy-600 text-sm sm:self-center">
                   Or email{' '}
-                  <a href={`mailto:${siteMeta.email}`} className="text-navy-700 font-medium hover:underline">
+                  <a href={`mailto:${siteMeta.email}`} target="_blank" rel="noopener noreferrer" className="text-navy-700 font-medium hover:underline">
                     {siteMeta.email}
                   </a>
                   {' or call '}
-                  <a href={`tel:${siteMeta.phone.replace(/\s|\(|\)|-/g, '')}`} className="text-navy-700 font-medium hover:underline">
+                  <a href={`tel:${siteMeta.phone.replace(/\s|\(|\)|-/g, '')}`} target="_blank" rel="noopener noreferrer" className="text-navy-700 font-medium hover:underline">
                     {siteMeta.phone}
                   </a>
                   .
