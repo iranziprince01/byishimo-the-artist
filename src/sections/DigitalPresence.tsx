@@ -26,15 +26,15 @@ export function DigitalPresence() {
 
   return (
     <SectionWrapper id="digital" background="navy" ariaLabel="Digital presence">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <AnimatedReveal>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+      <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center min-w-0 max-md:justify-items-center">
+        <AnimatedReveal className="min-w-0 max-md:flex max-md:flex-col max-md:items-center w-full">
+          <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-5 sm:mb-6">
             Connect & Listen
           </h2>
-          <p className="text-cream/90 font-body text-lg mb-8 text-justify hyphens-auto break-words">
+          <p className="text-cream/90 font-body text-lg mb-10 intro-lead">
             Stream on Spotify and Apple Music, watch on YouTube, and listen on Audiomack. Join the mailing list for new releases and updates.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 justify-center md:justify-start">
             {socialLinks.map((link) =>
               link.comingSoon ? (
                 <span
@@ -61,9 +61,9 @@ export function DigitalPresence() {
           </div>
         </AnimatedReveal>
 
-        <AnimatedReveal delay={0.15}>
-          <div className="bg-white/5 rounded-2xl p-6 sm:p-8 border border-white/10">
-            <div className="aspect-video rounded-lg overflow-hidden bg-navy-800 mb-6">
+        <AnimatedReveal delay={0.15} className="min-w-0 w-full max-w-xl lg:max-w-none mx-auto lg:mx-0">
+          <div className="bg-white/5 rounded-2xl p-6 sm:p-8 border border-white/10 min-w-0 text-left">
+            <div className="aspect-video rounded-lg overflow-hidden bg-navy-800 mb-6 sm:mb-8">
               <iframe
                 title="Faithful God — Patrick Byishimo"
                 src="https://www.youtube.com/embed/27RYulXhJcY?rel=0"
@@ -71,7 +71,7 @@ export function DigitalPresence() {
                 allowFullScreen
               />
             </div>
-            <p className="text-cream/80 font-body text-sm mb-4">
+            <p className="text-cream/80 font-body text-sm mb-4 text-justify hyphens-auto break-words">
               <a href="https://www.youtube.com/@patrickbyishimooffical" target="_blank" rel="noopener noreferrer" className="text-goldLight hover:text-white underline">Subscribe on YouTube</a> for live performances and new music videos.
             </p>
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">

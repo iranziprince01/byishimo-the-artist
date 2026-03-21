@@ -26,13 +26,13 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[100] pt-[env(safe-area-inset-top,0px)] transition-all duration-300 ${
         isOnHome
           ? 'bg-white shadow-md border-b border-navy-100/80'
           : 'bg-white/70 backdrop-blur-xl shadow-card'
       }`}
     >
-      <Container as="nav" className="flex items-center justify-between h-16 sm:h-20">
+      <Container as="nav" className="flex items-center justify-between min-h-16 h-16 sm:min-h-20 sm:h-20">
         <Link
           to="/"
           className="flex items-center shrink-0 hover:opacity-90 transition-opacity"
@@ -93,15 +93,19 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className={`md:hidden border-t border-navy-100/80 ${isOnHome ? 'bg-white' : 'bg-white/70 backdrop-blur-xl'}`}
+            className={`md:hidden border-t border-navy-100/80 max-h-[min(70dvh,calc(100dvh-5rem-env(safe-area-inset-top,0px)-env(safe-area-inset-bottom,0px)))] overflow-y-auto overscroll-contain bg-gradient-to-b from-navy-50/35 via-white to-white ${isOnHome ? '' : 'supports-[backdrop-filter]:bg-white/75 backdrop-blur-xl'}`}
           >
-            <ul className="px-4 py-6 flex flex-col gap-2 sm:gap-4">
+            <div className="mx-auto w-full max-w-sm px-4 flex flex-col items-center pb-[max(1.5rem,env(safe-area-inset-bottom,0px))] pt-2">
+              <p className="font-body text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-navy-400 mb-3">
+                Menu
+              </p>
+              <ul className="w-full flex flex-col items-stretch gap-1 sm:gap-2 py-2">
               {navLinks.map((link) => (
-                <li key={link.href}>
+                <li key={link.href} className="w-full flex justify-center">
                   {link.label === 'Booking' ? (
                     <Link
                       to={link.href}
-                      className="inline-flex items-center justify-center min-h-[48px] px-5 py-3 rounded-xl font-body text-sm font-semibold bg-navy-800 text-cream hover:bg-navy-700 transition-colors mt-2"
+                      className="w-full max-w-xs inline-flex items-center justify-center min-h-[48px] px-5 py-3 rounded-xl font-body text-sm font-semibold bg-navy-800 text-cream hover:bg-navy-700 transition-colors shadow-md border border-navy-700/30"
                       onClick={() => setMobileOpen(false)}
                     >
                       {link.label}
@@ -109,8 +113,10 @@ export function Navbar() {
                   ) : (
                     <Link
                       to={link.href}
-                      className={`block py-2 font-medium ${
-                        isActive(link.href) ? 'text-navy-900 font-semibold' : 'text-navy-800'
+                      className={`w-full max-w-xs text-center py-3 px-4 rounded-xl font-body text-[0.95rem] font-medium transition-colors ${
+                        isActive(link.href)
+                          ? 'text-navy-900 font-semibold bg-navy-100/80'
+                          : 'text-navy-800 hover:bg-navy-50/90'
                       }`}
                       onClick={() => setMobileOpen(false)}
                     >
@@ -119,7 +125,8 @@ export function Navbar() {
                   )}
                 </li>
               ))}
-            </ul>
+              </ul>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

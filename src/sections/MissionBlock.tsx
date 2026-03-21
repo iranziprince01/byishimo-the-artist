@@ -13,15 +13,15 @@ export function MissionBlock() {
   return (
     <SectionWrapper background="white" ariaLabel="Mission and values">
       <div className="max-w-3xl mx-auto">
-        <AnimatedReveal className="text-center mb-12">
-          <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900 mb-4">
+        <AnimatedReveal className="text-center mb-14 sm:mb-16">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-navy-900 mb-5 sm:mb-6">
             Mission & values
           </h2>
-          <p className="text-navy-600 font-body text-lg leading-relaxed">
+          <p className="text-navy-600 font-body text-lg leading-relaxed text-justify hyphens-auto break-words">
             {siteMeta.mission}
           </p>
         </AnimatedReveal>
-        <ul className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10">
+        <ul className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-12 lg:gap-14">
           {pillars.map(({ icon: Icon, title, text }) => (
             <AnimatedReveal key={title}>
               <li className="text-center">
@@ -29,7 +29,7 @@ export function MissionBlock() {
                   <Icon className="w-6 h-6" />
                 </div>
                 <h3 className="font-display font-semibold text-navy-900">{title}</h3>
-                <p className="font-body text-navy-600 text-sm mt-2 leading-relaxed">{text}</p>
+                <p className="font-body text-navy-600 text-sm mt-2 leading-relaxed text-justify hyphens-auto break-words">{text}</p>
               </li>
             </AnimatedReveal>
           ))}

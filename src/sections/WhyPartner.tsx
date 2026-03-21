@@ -13,17 +13,17 @@ const points = [
 export function WhyPartner() {
   return (
     <SectionWrapper background="white" ariaLabel="Why partner with us">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto max-md:text-center md:text-left">
         <AnimatedReveal>
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-navy-900 mb-4">
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-navy-900 mb-5 max-md:text-balance">
             Why partner with {siteMeta.businessName}
           </h2>
-          <p className="text-navy-600 font-body text-sm mb-8 text-justify hyphens-auto break-words">
+          <p className="text-navy-600 font-body text-sm mb-10 intro-lead">
             We bring a professional, scalable approach to Gospel music and ministry — ideal for churches, festivals, labels, and funding partners.
           </p>
-          <ul className="space-y-3">
+          <ul className="space-y-3 text-left max-md:mx-auto max-md:max-w-md">
             {points.map((point) => (
-              <li key={point} className="flex gap-3 font-body text-navy-700 text-sm">
+              <li key={point} className="flex gap-3 font-body text-navy-700 text-sm max-md:justify-start">
                 <HiCheckCircle className="w-5 h-5 text-navy-600 shrink-0 mt-0.5" />
                 <span>{point}</span>
               </li>

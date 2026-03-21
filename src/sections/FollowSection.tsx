@@ -16,10 +16,10 @@ export function FollowSection() {
     <SectionWrapper background="white" ariaLabel="Follow on social">
       <div className="max-w-2xl mx-auto text-center">
         <AnimatedReveal>
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-navy-900 mb-2">
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-navy-900 mb-3 sm:mb-4">
             Follow {siteMeta.artistName}
           </h2>
-          <p className="text-navy-600 font-body text-sm mb-8">
+          <p className="text-navy-600 font-body text-sm mb-10 text-justify hyphens-auto break-words">
             New music, behind-the-scenes, and updates on Instagram, Facebook, YouTube, and more.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

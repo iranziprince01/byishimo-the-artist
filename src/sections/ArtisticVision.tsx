@@ -9,16 +9,16 @@ const icons = [HiLanguage, HiGlobeAlt, HiHeart, HiRocketLaunch, HiStar, HiUserGr
 export function ArtisticVision() {
   return (
     <SectionWrapper id="vision" background="cream" ariaLabel="Artistic direction and cultural impact">
-      <AnimatedReveal className="flex flex-col gap-1">
-        <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 pb-4">
+      <AnimatedReveal className="flex flex-col gap-2 sm:gap-3">
+        <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 pb-2 sm:pb-3">
           Artistic Direction & Cultural Impact
         </h2>
-        <p className="text-navy-600 font-body text-lg max-w-2xl text-justify hyphens-auto break-words">
+        <p className="text-navy-600 font-body text-lg intro-lead">
           A clear vision for global Gospel reach, professional standards, and international partnerships.
         </p>
       </AnimatedReveal>
 
-      <div className="pt-10 sm:pt-14 md:pt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">
         {visionPoints.map((point, i) => {
           const Icon = icons[i % icons.length]
           return (

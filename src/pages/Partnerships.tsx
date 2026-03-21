@@ -11,18 +11,18 @@ export function Partnerships() {
     <>
       <SectionWrapper background="cream" ariaLabel="Partnerships" attachHeader>
       <AnimatedReveal>
-        <h1 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
+        <h1 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 mb-4 max-md:text-balance">
           Incoming Partnerships
         </h1>
-        <p className="text-navy-600 font-body text-lg max-w-2xl mb-2">
+        <p className="text-navy-600 font-body text-lg intro-lead mb-2">
           {siteMeta.businessName} is actively pursuing partnerships with churches, festivals, labels, and grant providers to scale international Gospel ministry.
         </p>
-        <p className="text-navy-500 font-body text-sm max-w-2xl mb-14">
+        <p className="text-navy-500 font-body text-sm max-w-2xl mb-2 sm:mb-3 text-justify hyphens-auto break-words max-md:mx-auto md:mx-0">
           If you represent an organization interested in touring, distribution, or funding, we’d like to hear from you.
         </p>
       </AnimatedReveal>
 
-      <div className="grid sm:grid-cols-2 gap-8">
+      <div className="grid sm:grid-cols-2 gap-10 sm:gap-12 max-md:justify-items-center w-full">
         {partnerships.map((p, i) => (
           <AnimatedReveal key={p.id} delay={i * 0.08}>
             <Card className="p-6 h-full flex flex-col">
@@ -44,7 +44,7 @@ export function Partnerships() {
         ))}
       </div>
 
-      <AnimatedReveal className="mt-16 text-center">
+      <AnimatedReveal className="text-center">
         <Link
           to="/booking"
           className="inline-flex items-center justify-center gap-2 min-h-[48px] px-6 py-3 rounded-xl font-semibold text-white bg-navy-800 hover:bg-navy-700 transition-colors"

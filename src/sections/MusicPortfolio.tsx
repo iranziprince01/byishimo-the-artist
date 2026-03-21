@@ -20,15 +20,15 @@ export function MusicPortfolio() {
   return (
     <SectionWrapper id="music" background="white" ariaLabel="Music portfolio" attachHeader>
       <AnimatedReveal>
-        <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
+        <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 mb-5 sm:mb-6">
           Music Portfolio
         </h2>
-        <p className="text-navy-600 font-body text-lg max-w-2xl text-justify hyphens-auto break-words">
+        <p className="text-navy-600 font-body text-lg intro-lead">
           Patrick's music combines acoustic folk sensibilities with global influences, featuring lyrical storytelling in four languages. His singles and recordings demonstrate a dedication to emotional depth, melodic clarity, and cross-cultural expression. Explore Patrick's latest releases below and connect on streaming platforms.
         </p>
       </AnimatedReveal>
 
-      <div className="mt-14 sm:mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-10 items-stretch">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 sm:gap-12 lg:gap-14 items-stretch">
         {tracks.map((track, i) => (
           <AnimatedReveal key={track.id} delay={i * 0.1} className="h-full">
             <Card className="h-full flex flex-col">

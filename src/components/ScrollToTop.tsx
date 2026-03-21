@@ -22,8 +22,8 @@ export function ScrollToTop() {
   }, [])
 
   const buttonClass = isNearFooter
-    ? 'fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-white text-navy-900 shadow-lg border border-white/80 flex items-center justify-center hover:bg-white/95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2'
-    : 'fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-navy-800 text-cream shadow-lg border border-navy-700 flex items-center justify-center hover:bg-navy-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-navy-600 focus-visible:ring-offset-2'
+    ? 'fixed z-50 w-12 h-12 rounded-full bg-white text-navy-900 shadow-lg border border-white/80 flex items-center justify-center hover:bg-white/95 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 bottom-[max(1.5rem,env(safe-area-inset-bottom,0px))] right-[max(1.5rem,env(safe-area-inset-right,0px))]'
+    : 'fixed z-50 w-12 h-12 rounded-full bg-navy-800 text-cream shadow-lg border border-navy-700 flex items-center justify-center hover:bg-navy-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-navy-600 focus-visible:ring-offset-2 bottom-[max(1.5rem,env(safe-area-inset-bottom,0px))] right-[max(1.5rem,env(safe-area-inset-right,0px))]'
 
   return (
     <AnimatePresence>

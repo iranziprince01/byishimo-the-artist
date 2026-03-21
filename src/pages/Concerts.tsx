@@ -10,19 +10,19 @@ export function Concerts() {
   return (
     <>
       <SectionWrapper background="white" ariaLabel="Concerts and ticketing" attachHeader>
-        <div className="max-w-2xl mx-auto text-center flex flex-col gap-10">
-          <AnimatedReveal className="flex flex-col gap-6">
+        <div className="max-w-2xl mx-auto text-center flex flex-col gap-12 sm:gap-14">
+          <AnimatedReveal className="flex flex-col gap-6 sm:gap-8">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-navy-100 text-navy-700">
               <HiTicket className="w-8 h-8" />
             </div>
             <h1 className="font-display text-3xl sm:text-4xl font-bold text-navy-900">
               Concerts & Ticketing
             </h1>
-            <p className="text-navy-600 font-body text-lg">
+            <p className="text-navy-600 font-body text-lg text-justify hyphens-auto break-words">
               Official concert dates and ticket sales for {siteMeta.artistName} will be available here.
               We are building a dedicated ticketing experience—check back soon or get in touch for advance inquiries.
             </p>
-            <p className="text-navy-500 font-body text-sm">
+            <p className="text-navy-500 font-body text-sm text-justify hyphens-auto break-words">
               Backend ticketing integration is planned. For now, use the booking page for event inquiries and reserved seating requests.
             </p>
           </AnimatedReveal>
@@ -47,7 +47,7 @@ export function Concerts() {
             <h2 className="font-display text-xl sm:text-2xl font-bold text-navy-900 mb-2">
               Upcoming & past events
             </h2>
-            <p className="text-navy-600 font-body text-sm">
+            <p className="text-navy-600 font-body text-sm text-justify hyphens-auto break-words">
               A full events calendar with dates, venues, and ticket links will appear here once our ticketing system is live. For now, check highlights on the Experience page or contact us for upcoming dates.
             </p>
           </AnimatedReveal>

@@ -27,10 +27,10 @@ export function Home() {
       <SectionWrapper background="cta" ariaLabel="Partnerships and booking">
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedReveal>
-            <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-3">
+            <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-5">
               Partnerships & Booking
             </h2>
-            <p className="text-cream/80 font-body text-base sm:text-lg mb-6 break-words">
+            <p className="text-cream/80 font-body text-base sm:text-lg mb-8 sm:mb-10 text-justify hyphens-auto break-words">
               {siteMeta.businessName} is open to touring, festivals, labels, and grant partnerships. Incoming partnership areas: church & ministry touring, festival booking, distribution, and funding.
             </p>
             <Link

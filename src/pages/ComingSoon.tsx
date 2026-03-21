@@ -16,18 +16,18 @@ export function ComingSoon() {
   return (
     <>
       <SectionWrapper background="gradient" ariaLabel="Coming soon" attachHeader>
-        <div className="max-w-md mx-auto text-center flex flex-col gap-8">
-          <AnimatedReveal className="flex flex-col gap-6">
+        <div className="max-w-md mx-auto text-center flex flex-col gap-10 sm:gap-12">
+          <AnimatedReveal className="flex flex-col gap-6 sm:gap-8">
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-navy-100 text-navy-700">
               <HiSparkles className="w-8 h-8" />
             </div>
             <h1 className="font-display text-3xl sm:text-4xl font-bold text-navy-900">
               {title}
             </h1>
-            <p className="text-navy-600 font-body text-lg">
+            <p className="text-navy-600 font-body text-lg text-justify hyphens-auto break-words">
               This section is in development. Branding guidelines, merch (including T-shirts), and other artist resources will be available here soon.
             </p>
-            <p className="text-navy-500 font-body text-sm">
+            <p className="text-navy-500 font-body text-sm text-justify hyphens-auto break-words">
               For branding or merch inquiries in the meantime, reach out via the contact section below or the booking page.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">

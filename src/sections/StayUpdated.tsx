@@ -16,15 +16,15 @@ export function StayUpdated({ variant = 'default' }: StayUpdatedProps) {
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-navy-100 text-navy-700 mb-4">
             {isConcerts ? <HiBellAlert className="w-6 h-6" /> : <HiEnvelope className="w-6 h-6" />}
           </div>
-          <h2 className="font-display text-xl sm:text-2xl font-bold text-navy-900 mb-2">
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-navy-900 mb-3 sm:mb-4">
             {isConcerts ? 'Get notified when tickets go live' : 'Stay updated'}
           </h2>
-          <p className="text-navy-600 font-body text-sm leading-relaxed mb-6">
+          <p className="text-navy-600 font-body text-sm leading-relaxed mb-8 text-justify hyphens-auto break-words">
             {isConcerts
               ? `Be the first to know when ${siteMeta.artistName} concert tickets and new dates are available.`
               : `New music, tour dates, and updates from ${siteMeta.businessName}. Join our list to stay in the loop.`}
           </p>
-          <p className="text-navy-500 font-body text-xs leading-relaxed">
+          <p className="text-navy-500 font-body text-xs leading-relaxed text-justify hyphens-auto break-words">
             <strong className="text-navy-700">Mailing list coming soon.</strong> Our sign-up and notification system is in development. For now, follow us on social media or reach out at{' '}
             <a href={`mailto:${siteMeta.email}`} target="_blank" rel="noopener noreferrer" className="text-navy-700 font-medium hover:underline break-all">
               {siteMeta.email}

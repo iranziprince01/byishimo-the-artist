@@ -44,8 +44,52 @@
   color: #faf9f6 !important;
 }
 
+@layer components {
+  /**
+   * Mobile (< md, burger nav): centered headings / layout rail.
+   * md+: left-aligned rail. Cardless body copy uses .intro-lead / text-justify on <p>.
+   * Cards/forms use text-left to opt out of section alignment.
+   */
+  .section-mobile-rail {
+    @apply w-full min-w-0 max-md:text-center md:text-left;
+  }
+
+  .section-mobile-rail h1,
+  .section-mobile-rail h2,
+  .section-mobile-rail h3 {
+    @apply max-md:text-balance;
+  }
+
+  /**
+   * Cardless section intros: justified at all breakpoints (reads cleanly on narrow screens).
+   * Block stays centered on mobile when inside section-mobile-rail via max-md:mx-auto.
+   */
+  .intro-lead {
+    @apply max-w-2xl max-md:mx-auto md:mx-0 text-justify hyphens-auto break-words;
+  }
+
+  /** Standalone paragraphs (not inside .Card): full justification */
+  .copy-justify {
+    @apply text-justify hyphens-auto break-words;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Safe areas (notched iPhones, home indicator) */
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pl-safe {
+    padding-left: env(safe-area-inset-left, 0px);
+  }
+  .pr-safe {
+    padding-right: env(safe-area-inset-right, 0px);
   }
 }

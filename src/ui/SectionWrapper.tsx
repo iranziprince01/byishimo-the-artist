@@ -32,21 +32,24 @@ export function SectionWrapper({
   attachHeader = false,
 }: SectionWrapperProps) {
   const isHome = useLocation().pathname === '/'
+  /** Generous vertical rhythm: space between stacked page sections */
   const paddingClass = isHome
     ? attachHeader
-      ? 'pt-28 sm:pt-32 lg:pt-40 pb-28 sm:pb-32 lg:pb-40'
-      : 'py-20 sm:py-24 lg:py-28'
+      ? 'pt-32 sm:pt-36 lg:pt-44 pb-32 sm:pb-40 lg:pb-48'
+      : 'py-24 sm:py-28 lg:py-32'
     : attachHeader
-      ? 'pt-28 sm:pt-32 lg:pt-40 pb-28 sm:pb-32 lg:pb-40'
-      : 'py-24 sm:py-28 lg:py-36'
+      ? 'pt-32 sm:pt-36 lg:pt-44 pb-32 sm:pb-40 lg:pb-48'
+      : 'py-28 sm:py-32 lg:py-44'
   return (
     <section
       id={id}
       className={`${paddingClass} ${bgMap[background]} ${className}`}
       aria-label={ariaLabel}
     >
-      <div className="flex justify-center min-w-0">
-        <Container>{children}</Container>
+      <div className="flex justify-center min-w-0 w-full">
+        <Container className="section-mobile-rail flex flex-col gap-y-12 sm:gap-y-16 lg:gap-y-24">
+          {children}
+        </Container>
       </div>
     </section>
   )
