@@ -24,7 +24,7 @@ export function Footer() {
               className="h-12 w-auto object-contain max-md:mx-auto"
             />
             <p className="text-cream/70 font-body text-sm mt-1.5 max-md:max-w-xs text-justify hyphens-auto break-words">
-              Multilingual Folk & World Artist, Award-Winning Songwriter, and Energetic Performer
+              {siteMeta.tagline}
             </p>
             <div className="mt-3 font-body text-sm text-cream/80 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-x-4 sm:gap-y-1 sm:items-baseline max-md:items-center">
               <span>
@@ -48,9 +48,9 @@ export function Footer() {
           <nav aria-label="Footer navigation" className="md:pt-0 flex-1 min-w-0 w-full max-md:flex max-md:justify-center">
             <div className="grid grid-cols-2 sm:grid-cols-3 w-full max-w-md md:max-w-none gap-x-8 gap-y-3 sm:gap-x-10 sm:gap-y-1 lg:gap-x-12 max-md:justify-items-center md:justify-items-start text-center md:text-left">
               {[
-                [footerNavLinks[0], footerNavLinks[1], footerNavLinks[2]], // Home, About, Music
-                [footerNavLinks[3], footerNavLinks[4]],                     // Experience, Booking
-                [footerNavLinks[5], footerNavLinks[6]],                    // Concerts, Partnerships
+                [footerNavLinks[0], footerNavLinks[1]],
+                [footerNavLinks[2], footerNavLinks[3]],
+                [footerNavLinks[4], footerNavLinks[5]],
               ].map((column, colIndex) => (
                 <div key={colIndex} className="flex flex-col gap-1 items-center md:items-start">
                   {column.map((link) => (

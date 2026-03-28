@@ -17,7 +17,7 @@ export function Layout() {
       <Navbar />
       <main
         id="main-content"
-        className="m-0 min-w-0 w-full"
+        className="relative m-0 min-h-0 min-w-0 w-full max-w-[100vw] flex-1 flex-col overflow-x-clip"
       >
         <Outlet />
       </main>

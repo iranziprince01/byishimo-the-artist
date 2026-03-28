@@ -3,7 +3,8 @@ import type { Track, Highlight, Testimonial, SocialLink, NavLink, Partnership } 
 /** Image paths use filenames as in public/images/ */
 export const images = {
   headshot: '/images/01.jpeg',
-  hero: '/images/02.jpeg',
+  /** Full-bleed home hero — concert / worship atmosphere (Unsplash: Phil Hearing, unsplash.com/photos/tRzWVCs4uXY, Unsplash License) */
+  hero: '/images/hero-concert-worship.jpg',
   about: '/images/03.jpeg',
   gallery: ['/images/04.jpeg', '/images/05.jpeg', '/images/06.jpeg'] as const,
   /** Logo: 1.png for light backgrounds (header), 2.png for dark (footer) */
@@ -14,8 +15,9 @@ export const images = {
 export const siteMeta = {
   artistName: 'Patrick Byishimo',
   tagline: 'Multilingual Folk & World Artist · Award-Winning Songwriter · Energetic Performer',
-  mission: 'Multilingual folk and world music that brings people together through storytelling, cultural experience, and acoustic expression.',
-  heroSummary: 'Patrick Byishimo is a multilingual folk and world music artist, award-winning songwriter, and energetic performer based in Edmonton, Canada. Originally from the Democratic Republic of Congo, Patrick\'s musical journey began in East Africa and continued in Canada, where he has developed a distinctive voice rooted in storytelling, cultural experience, and acoustic expression.',
+  /** Meta / SEO / press one-liner; keep aligned with `copy.heroLead` + `copy.heroSupporting` */
+  heroSummary:
+    'Patrick Byishimo is a multilingual folk and world music artist and songwriter based in Edmonton, Canada. His work emphasizes storytelling, cultural fluency, and acoustic performance across several languages.',
   location: '7412 174 Avenue NW, Edmonton, Alberta, Canada',
   email: 'contact@byishimomusic.com',
   phone: '+1 (780) 200-9912',
@@ -23,12 +25,36 @@ export const siteMeta = {
   businessType: 'Folk & World Music production, publishing & entertainment services',
 }
 
+/**
+ * Central site copy — single source to avoid repeated sentences across Hero, Music, Highlights, CTAs, etc.
+ * (Important for grant and institutional reviewers.)
+ */
+export const copy = {
+  heroLead:
+    'A multilingual folk and world music artist, award-winning songwriter, and energetic performer based in Edmonton, Canada.',
+  heroSupporting:
+    "Originally from the Democratic Republic of Congo, Patrick's musical journey began in East Africa and continued in Canada, where he developed a distinctive voice rooted in storytelling, cultural experience, and acoustic expression.",
+  musicPortfolioIntro:
+    'Selected singles and recordings with streaming and embedded video on each card—multilingual songwriting and live-oriented production.',
+  highlightsIntro:
+    'Representative contexts: churches, festivals, conferences, community events, and online engagement.',
+  musicListenLead: 'The Music page lists the full catalog with streaming and video links.',
+  musicListenBooking: 'For scheduling, holds, and technical questions, submit the Booking form.',
+  connectLead: 'For booking, press kits, and partnership inquiries, email or call.',
+  whyPartnerIntro:
+    'Registered business, international scope, and tour-ready documentation—structured for churches, festivals, funders, and labels.',
+  partnershipPageSecondary:
+    'If you represent an organization exploring touring, distribution, or funding, introductory inquiries are welcome.',
+  /** Home page strip — Booking is canonical; Partnerships page holds detail */
+  partnershipHomeTeaser:
+    'Partnership inquiries in touring, festivals, distribution, and funding are submitted through Booking. Scope and focus areas are on the Partnerships page.',
+} as const
+
 /** Main header nav: 5 items. Other pages linked from Home and footer. */
 export const navLinks: NavLink[] = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Music', href: '/music' },
-  { label: 'Experience', href: '/experience' },
   { label: 'Booking', href: '/booking' },
 ]
 
@@ -161,6 +187,9 @@ export const bioParagraphs = [
   'Patrick\'s songs reflect rich cultural narratives and personal experience, and his live performances blend heartfelt engagement with vibrant musicality. He has shared stages with artists from diverse backgrounds and continues to pursue opportunities that expand his artistic reach and audience connection.',
 ]
 
+/** Single-paragraph bio for press kit PDF / media column (avoids duplicating the full About page). */
+export const shortBioPress = `${bioParagraphs[0]} His music blends folk, world, and community traditions with lyrical storytelling in multiple languages including Kinyarwanda, Swahili, French, and English.`
+
 export const visionPoints = [
   {
     title: 'Global Gospel Reach',
@@ -180,7 +209,8 @@ export const visionPoints = [
   },
   {
     title: 'Business-Ready Ministry',
-    description: 'Patrick Byishimo Music operates as a registered business—positioned for grants, ticketing, licensing, and sustainable international ministry.',
+    description:
+      'Registered business entity—contracts, ticketing, licensing, and grant applications supported with clear documentation.',
   },
   {
     title: 'Community & Church Engagement',
@@ -189,7 +219,7 @@ export const visionPoints = [
 ]
 
 export const pressKit = {
-  shortBio: 'Patrick Byishimo (pronounced Bee-YEE-shee-mo, meaning "happy") is a performing artist, songwriter, and instrumentalist from the Democratic Republic of Congo, now based in Edmonton, Alberta. His music blends folk, world, and community traditions with lyrical storytelling in multiple languages including Kinyarwanda, Swahili, French, and English.',
+  shortBio: shortBioPress,
   genre: 'Folk / World / Community / Multilingual',
   businessName: 'Patrick Byishimo Music',
   businessType: 'Folk & World Music production, publishing & entertainment services',
@@ -205,7 +235,7 @@ export const partnerships: Partnership[] = [
     id: '1',
     name: 'Church & Ministry Touring',
     type: 'Touring & Events',
-    description: 'Structured partnerships with churches and ministries for worship nights, conferences, and multi-date runs. Inquiries welcome.',
+    description: 'Structured partnerships with churches and ministries for worship nights, conferences, and multi-date runs.',
     status: 'incoming',
   },
   {

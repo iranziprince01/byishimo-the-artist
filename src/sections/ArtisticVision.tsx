@@ -13,9 +13,6 @@ export function ArtisticVision() {
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 pb-2 sm:pb-3">
           Artistic Direction & Cultural Impact
         </h2>
-        <p className="text-navy-600 font-body text-lg intro-lead">
-          A clear vision for global Gospel reach, professional standards, and international partnerships.
-        </p>
       </AnimatedReveal>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 lg:gap-12">

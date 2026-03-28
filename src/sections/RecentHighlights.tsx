@@ -1,7 +1,7 @@
 import { SectionWrapper } from '../ui/SectionWrapper'
 import { AnimatedReveal } from '../ui/AnimatedReveal'
 import { Card } from '../ui/Card'
-import { highlights } from '../data/content'
+import { copy, highlights } from '../data/content'
 import { HiMusicalNote, HiUserGroup, HiGlobeAlt, HiBuildingOffice2, HiCalendar, HiSparkles } from 'react-icons/hi2'
 
 const typeConfig: Record<string, { icon: React.ReactNode; label: string }> = {
@@ -20,12 +20,7 @@ export function RecentHighlights() {
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 pb-2 sm:pb-3">
           Recent Highlights
         </h2>
-        <p className="text-navy-600 font-body text-lg intro-lead">
-          Patrick Byishimo performs regularly in a range of settings, including community events, festivals, and cultural showcases. His live performances showcase his versatility as a performer and his talent for connecting with audiences through engaging storytelling and spirited musical delivery.
-        </p>
-        <p className="text-navy-600 font-body text-sm max-w-2xl mt-1 text-justify hyphens-auto break-words max-md:mx-auto md:mx-0">
-          To inquire about bookings, please use the contact form.
-        </p>
+        <p className="text-navy-600 font-body text-lg intro-lead">{copy.highlightsIntro}</p>
       </AnimatedReveal>
 
       <div className="relative">

@@ -19,7 +19,6 @@ export function DigitalPresence() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (email) {
-      // Placeholder: would send to backend or mailing service
       setEmail('')
     }
   }

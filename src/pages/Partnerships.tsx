@@ -1,7 +1,7 @@
 import { SectionWrapper } from '../ui/SectionWrapper'
 import { AnimatedReveal } from '../ui/AnimatedReveal'
 import { Card } from '../ui/Card'
-import { partnerships, siteMeta } from '../data/content'
+import { copy, partnerships, siteMeta } from '../data/content'
 import { HiHandRaised, HiArrowRight } from 'react-icons/hi2'
 import { Link } from 'react-router-dom'
 import { WhyPartner } from '../sections/WhyPartner'
@@ -15,10 +15,10 @@ export function Partnerships() {
           Incoming Partnerships
         </h1>
         <p className="text-navy-600 font-body text-lg intro-lead mb-2">
-          {siteMeta.businessName} is actively pursuing partnerships with churches, festivals, labels, and grant providers to scale international Gospel ministry.
+          {siteMeta.businessName} pursues partnerships with churches, festivals, labels, and grant programs to extend Gospel ministry internationally.
         </p>
         <p className="text-navy-500 font-body text-sm max-w-2xl mb-2 sm:mb-3 text-justify hyphens-auto break-words max-md:mx-auto md:mx-0">
-          If you represent an organization interested in touring, distribution, or funding, we’d like to hear from you.
+          {copy.partnershipPageSecondary}
         </p>
       </AnimatedReveal>
 

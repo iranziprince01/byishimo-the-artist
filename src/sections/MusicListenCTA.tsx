@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SectionWrapper } from '../ui/SectionWrapper'
 import { AnimatedReveal } from '../ui/AnimatedReveal'
-import { siteMeta } from '../data/content'
+import { copy } from '../data/content'
 import { HiCalendar } from 'react-icons/hi2'
 
 export function MusicListenCTA() {
@@ -12,14 +12,14 @@ export function MusicListenCTA() {
           <h2 className="font-display text-xl sm:text-2xl font-bold text-navy-900 mb-3 sm:mb-4">
             Listen everywhere
           </h2>
-          <p className="text-navy-600 font-body text-sm mb-8 text-justify hyphens-auto break-words">
-            {siteMeta.artistName}'s music combines acoustic folk sensibilities with global influences, featuring lyrical storytelling in four languages. Available on Spotify, Apple Music, YouTube Music, and Audiomack. Follow and save to get new releases first.
+          <p className="text-navy-600 font-body text-sm mb-6 text-justify hyphens-auto break-words">
+            {copy.musicListenLead}
           </p>
-          <h3 className="font-display font-semibold text-navy-900 mb-4 max-md:text-balance">
-            Book for live events
+          <h3 className="font-display font-semibold text-navy-900 mb-3 max-md:text-balance">
+            Booking
           </h3>
           <p className="text-navy-600 font-body text-sm mb-8 text-justify hyphens-auto break-words">
-            To inquire about bookings, please use the contact form for dates and availability.
+            {copy.musicListenBooking}
           </p>
           <Link
             to="/booking"

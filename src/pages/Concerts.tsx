@@ -48,7 +48,7 @@ export function Concerts() {
               Upcoming & past events
             </h2>
             <p className="text-navy-600 font-body text-sm text-justify hyphens-auto break-words">
-              A full events calendar with dates, venues, and ticket links will appear here once our ticketing system is live. For now, check highlights on the Experience page or contact us for upcoming dates.
+              A full events calendar with dates, venues, and ticket links will appear here once our ticketing system is live. For now, see Recent Highlights on the home page or contact us for upcoming dates.
             </p>
           </AnimatedReveal>
         </div>

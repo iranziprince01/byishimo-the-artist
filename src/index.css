@@ -5,19 +5,31 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   body {
     @apply font-body text-navy-800 antialiased;
     font-feature-settings: "kern" 1, "liga" 1;
-    overflow-x: hidden;
+    overflow-x: clip;
+    min-width: 0;
+  }
+
+  #root {
+    display: flex;
+    min-height: 100dvh;
+    min-width: 0;
+    flex-direction: column;
+    overflow-x: clip;
   }
 
   #main-content {
     margin: 0;
     min-width: 0;
-    overflow-x: hidden;
+    overflow-x: clip;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
   }
 
   h1, h2, h3, h4 {

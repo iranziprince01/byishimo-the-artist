@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { SectionWrapper } from '../ui/SectionWrapper'
 import { AnimatedReveal } from '../ui/AnimatedReveal'
-import { siteMeta } from '../data/content'
+import { copy, siteMeta } from '../data/content'
 import { HiEnvelope, HiPhone, HiCalendar } from 'react-icons/hi2'
 
 export function ConnectCTA() {
@@ -13,7 +13,7 @@ export function ConnectCTA() {
             Connect with us
           </h2>
           <p className="text-navy-600 font-body text-lg mb-10 text-justify hyphens-auto break-words">
-            For booking, collaborations, or press inquiries: please reach us using the contact details below.
+            {copy.connectLead}
           </p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-navy-700 font-body text-sm">
             <a
@@ -41,9 +41,6 @@ export function ConnectCTA() {
               </span>
             </a>
           </div>
-          <p className="text-navy-600 font-body text-sm mt-8 text-justify hyphens-auto break-words">
-            Follow Patrick on social media for updates, new releases, and live performance announcements.
-          </p>
           <Link
             to="/booking"
             className="mt-10 inline-flex items-center justify-center gap-2 min-h-[48px] min-w-[200px] sm:min-w-0 px-6 py-3 rounded-xl font-semibold text-navy-900 bg-[#ffe600] hover:bg-[#ffec33] transition-colors touch-manipulation"

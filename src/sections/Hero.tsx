@@ -1,35 +1,31 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { siteMeta, images } from '../data/content'
+import { copy, images, siteMeta } from '../data/content'
 import { HiPlay, HiCalendar, HiMusicalNote } from 'react-icons/hi2'
 
 const stagger = (i: number) => ({ delay: i * 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] })
 
 export function Hero() {
-  // Two paragraphs so the line length stays attractive on small screens.
-  // Per grant-writer guidance: remove the name from paragraph 1 and start with a capital "A".
-  const heroPara1 =
-    'A multilingual folk and world music artist, award-winning songwriter, and energetic performer based in Edmonton, Canada.'
-  const heroPara2 =
-    "Originally from the Democratic Republic of Congo, Patrick's musical journey began in East Africa and continued in Canada, where he has developed a distinctive voice rooted in storytelling, cultural experience, and acoustic expression."
-
   return (
     <section
       id="hero"
-      className="relative min-h-[100dvh] flex flex-col justify-start md:justify-center bg-navy-950 overflow-x-hidden"
+      className="relative isolate flex min-h-[100dvh] w-full max-w-none flex-col justify-start overflow-x-hidden bg-navy-950 md:justify-center"
       aria-label="Introduction"
     >
-      {/* Background picture - full viewport, with dark overlay */}
-      <div className="absolute inset-0 z-0 min-h-full">
-        <div
-          className="absolute inset-0 bg-cover bg-no-repeat scale-105"
-          style={{
-            backgroundImage: `url('${images.hero}')`,
-            backgroundPosition: 'center 22%',
-          }}
+      {/* Full-bleed photo: img + object-cover fills the section edge-to-edge (CSS bg on wide screens can look inset next to strong side gradients) */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0 min-h-full w-full min-w-full overflow-hidden"
+        aria-hidden
+      >
+        <img
+          src={images.hero}
+          alt=""
+          decoding="async"
+          fetchPriority="high"
+          className="absolute inset-0 z-0 block h-full min-h-full w-full min-w-full object-cover object-[center_22%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-950/96 via-navy-950/94 to-navy-950/98" aria-hidden />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-950/85 to-navy-950/95" aria-hidden />
+        {/* Uniform 90% navy scrim — keeps headline, copy, CTAs, and portrait card readable */}
+        <div className="absolute inset-0 z-[1] bg-navy-950/90" aria-hidden />
       </div>
 
       {/* Hero content — min-height fills first screen; can grow on small phones so nothing is clipped */}
@@ -53,12 +49,8 @@ export function Hero() {
           transition={stagger(3)}
           className="text-sm xs:text-base sm:text-lg text-white/90 font-body font-light max-w-xl mb-8 sm:mb-12 md:mb-14 leading-relaxed max-md:mx-auto"
         >
-          <p className="block text-justify hyphens-auto break-words">{heroPara1}</p>
-          {heroPara2 && (
-            <p className="block mt-4 text-justify hyphens-auto break-words">
-              {heroPara2}
-            </p>
-          )}
+          <p className="block text-justify hyphens-auto break-words">{copy.heroLead}</p>
+          <p className="block mt-4 text-justify hyphens-auto break-words">{copy.heroSupporting}</p>
         </motion.div>
 
         {/* CTAs: white and light gold on dark hero */}
@@ -83,7 +75,7 @@ export function Hero() {
             Book Patrick
           </Link>
           <Link
-            to="/press"
+            to={{ pathname: '/', hash: 'press' }}
             className="inline-flex items-center justify-center gap-2 min-h-[48px] w-full sm:w-auto px-4 sm:px-6 py-3 rounded-xl font-semibold text-white bg-transparent border-2 border-white hover:bg-white hover:text-navy-900 transition-all hover:scale-[1.02] active:scale-[0.98]"
           >
             <HiMusicalNote className="w-5 h-5" aria-hidden />
@@ -92,7 +84,7 @@ export function Hero() {
         </motion.div>
       </div>
 
-        {/* Right: 03 image - taller aspect to show full picture */}
+        {/* Right: portrait — headshot (hero bg is separate stock atmosphere image) */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -101,7 +93,7 @@ export function Hero() {
         >
           <div className="rounded-2xl overflow-hidden shadow-2xl ring-2 ring-white/20">
             <img
-              src={images.hero}
+              src={images.headshot}
               alt="Patrick Byishimo"
               className="w-full max-h-[min(42vh,18rem)] md:max-h-none aspect-[3/5] object-cover object-top"
             />

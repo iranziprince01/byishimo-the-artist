@@ -25,11 +25,11 @@ export function StayUpdated({ variant = 'default' }: StayUpdatedProps) {
               : `New music, tour dates, and updates from ${siteMeta.businessName}. Join our list to stay in the loop.`}
           </p>
           <p className="text-navy-500 font-body text-xs leading-relaxed text-justify hyphens-auto break-words">
-            <strong className="text-navy-700">Mailing list coming soon.</strong> Our sign-up and notification system is in development. For now, follow us on social media or reach out at{' '}
+            List registration opens when the notification system is live. For timely updates in the meantime, write to{' '}
             <a href={`mailto:${siteMeta.email}`} target="_blank" rel="noopener noreferrer" className="text-navy-700 font-medium hover:underline break-all">
               {siteMeta.email}
             </a>
-            {' '}to be kept in the loop.
+            .
           </p>
         </AnimatedReveal>
       </div>

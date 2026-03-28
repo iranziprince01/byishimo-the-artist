@@ -20,7 +20,7 @@ export function FollowSection() {
             Follow {siteMeta.artistName}
           </h2>
           <p className="text-navy-600 font-body text-sm mb-10 text-justify hyphens-auto break-words">
-            New music, behind-the-scenes, and updates on Instagram, Facebook, YouTube, and more.
+            New releases, performances, and announcements on Instagram, Facebook, YouTube, and Spotify.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             {socialLinks.map((link) =>

@@ -1,9 +1,8 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { Home } from './pages/Home'
 import { About } from './pages/About'
 import { Music } from './pages/Music'
-import { Experience } from './pages/Experience'
 import { Booking } from './pages/Booking'
 import { Concerts } from './pages/Concerts'
 import { Partnerships } from './pages/Partnerships'
@@ -17,13 +16,14 @@ function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="music" element={<Music />} />
-          <Route path="experience" element={<Experience />} />
           <Route path="booking" element={<Booking />} />
-          <Route path="highlights" element={<Experience />} />
-          <Route path="vision" element={<Experience />} />
-          <Route path="press" element={<Experience />} />
-          <Route path="gallery" element={<Experience />} />
-          <Route path="testimonials" element={<Experience />} />
+          {/* Legacy URLs → home section anchors (content lives on Home) */}
+          <Route path="experience" element={<Navigate to="/music" replace />} />
+          <Route path="highlights" element={<Navigate to={{ pathname: '/', hash: 'highlights' }} replace />} />
+          <Route path="vision" element={<Navigate to={{ pathname: '/', hash: 'vision' }} replace />} />
+          <Route path="press" element={<Navigate to={{ pathname: '/', hash: 'press' }} replace />} />
+          <Route path="gallery" element={<Navigate to={{ pathname: '/', hash: 'gallery' }} replace />} />
+          <Route path="testimonials" element={<Navigate to={{ pathname: '/', hash: 'testimonials' }} replace />} />
           <Route path="concerts" element={<Concerts />} />
           <Route path="partnerships" element={<Partnerships />} />
           <Route path="branding" element={<ComingSoon />} />

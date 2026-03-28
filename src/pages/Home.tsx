@@ -9,7 +9,7 @@ import { Testimonials } from '../sections/Testimonials'
 import { SectionWrapper } from '../ui/SectionWrapper'
 import { AnimatedReveal } from '../ui/AnimatedReveal'
 import { Link } from 'react-router-dom'
-import { siteMeta } from '../data/content'
+import { copy } from '../data/content'
 import { HiArrowRight } from 'react-icons/hi2'
 
 export function Home() {
@@ -31,7 +31,7 @@ export function Home() {
               Partnerships & Booking
             </h2>
             <p className="text-cream/80 font-body text-base sm:text-lg mb-8 sm:mb-10 text-justify hyphens-auto break-words">
-              {siteMeta.businessName} is open to touring, festivals, labels, and grant partnerships. Incoming partnership areas: church & ministry touring, festival booking, distribution, and funding.
+              {copy.partnershipHomeTeaser}
             </p>
             <Link
               to="/booking"

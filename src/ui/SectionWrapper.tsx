@@ -46,8 +46,8 @@ export function SectionWrapper({
       className={`${paddingClass} ${bgMap[background]} ${className}`}
       aria-label={ariaLabel}
     >
-      <div className="flex justify-center min-w-0 w-full">
-        <Container className="section-mobile-rail flex flex-col gap-y-12 sm:gap-y-16 lg:gap-y-24">
+      <div className="flex w-full min-w-0 max-w-[100vw] justify-center overflow-x-clip">
+        <Container className="section-mobile-rail flex flex-col gap-y-10 sm:gap-y-14 lg:gap-y-20 xl:gap-y-24">
           {children}
         </Container>
       </div>

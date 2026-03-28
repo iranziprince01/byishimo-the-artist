@@ -38,7 +38,7 @@ export function Booking() {
             Book Patrick
           </h2>
           <p className="text-navy-600 font-body text-lg mb-12 sm:mb-14 intro-lead">
-            For bookings, concerts, conferences, and events. {siteMeta.businessName} — {siteMeta.businessType}. Fill out the form below or email directly.
+            Concerts, conferences, churches, and special events. {siteMeta.businessName} — {siteMeta.businessType}. Submit the form below or email directly.
           </p>
         </AnimatedReveal>
 
@@ -188,7 +188,7 @@ export function Booking() {
           </ul>
           <AnimatedReveal className="mt-12 sm:mt-14 p-6 sm:p-7 rounded-xl bg-white border border-navy-100">
             <p className="text-navy-600 font-body text-sm leading-relaxed text-justify hyphens-auto break-words">
-              <strong className="text-navy-800">Ticketing platform in development.</strong> Our full online ticketing system is currently being built. In the meantime, you can reserve your spot or request tickets for upcoming events using the booking form above or by contacting us directly. We will notify our audience when ticket sales go live.
+              <strong className="text-navy-800">Ticketing platform in development.</strong> Full online ticketing is in build. Until launch, reservations and ticket requests go through the Booking form on this page or by contacting {siteMeta.businessName} directly. Ticket sales will be announced when live.
             </p>
           </AnimatedReveal>
         </div>
@@ -223,7 +223,7 @@ export function Booking() {
           </ul>
           <AnimatedReveal className="mt-12 sm:mt-14 p-6 sm:p-7 rounded-xl bg-cream border border-navy-100">
             <p className="text-navy-600 font-body text-sm leading-relaxed text-justify hyphens-auto break-words">
-              <strong className="text-navy-800">Online store coming soon.</strong> Our merch platform is in development. If you are interested in pre-orders, wholesale, or being notified at launch, please use the booking form above or reach out to us directly. We will announce the store opening via our mailing list and social channels.
+              <strong className="text-navy-800">Online store in development.</strong> For pre-orders, wholesale, or launch notification, use the Booking form or email {siteMeta.email}. Store opening will be announced when the platform is ready.
             </p>
           </AnimatedReveal>
         </div>
